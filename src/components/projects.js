@@ -5,7 +5,7 @@ import { projects } from './projects/project_list.js'
 
 const Technologies = () => {
     return (
-        <div className='technologies'>
+        <div className='technologies container'>
             <h2>Technologies</h2>
             <div className='programming-techs'>
                 <h3>Programming</h3>
