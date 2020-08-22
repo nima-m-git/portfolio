@@ -5,6 +5,7 @@ import './index.css';
 
 import { Header } from './components/header.js'
 import { About } from './components/about.js';
+import { Projects } from './components/projects.js';
 
 
 ReactDOM.render(
@@ -12,6 +13,7 @@ ReactDOM.render(
       <h1>Portfolio</h1>
       <Header />
       <About />
+      <Projects />
     </React.StrictMode>,
     document.getElementById('root')
   );
