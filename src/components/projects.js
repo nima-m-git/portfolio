@@ -10,10 +10,15 @@ const Technologies = () => {
             <div className='programming-techs'>
                 <h3>Programming</h3>
                 <ul>
-                    <li>React</li>
-                    <li>Javascript</li>
-                    <li>Node</li>
                     <li>Python</li>
+                    <li>Javascript</li>
+                </ul>
+            </div>
+            <div className='framework-techs'>
+                <h3>Frameworks</h3>
+                <ul>
+                    <li>React</li>
+                    <li>Node</li>
                     <li>Django</li>
                 </ul>
             </div>
@@ -30,17 +35,17 @@ const Technologies = () => {
                 <ul>
                     <li>PostgreSQL</li>
                     <li>MySQL</li>
-                    <li>sqlite</li>
+                    <li>sqlite3</li>
                     <li>Firestore</li>
                 </ul>
             </div>
             <div className='other-techs'>
-                <h3>Other Tools</h3>
+                <h3>Software & Tools</h3>
                 <ul>
                     <li>WebPack</li>
                     <li>Firebase</li>
-                    <li>sqlite</li>
-                    <li>Firebase Firestore</li>
+                    <li>Git</li>
+                    <li>Firebase</li>
                 </ul>
             </div>
             

@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import 'normalize.css';
+import './index.scss';
 
 
 import { Header } from './components/header.js'
@@ -11,11 +14,12 @@ import { Contact } from './components/contact.js';
 
 ReactDOM.render(
     <React.StrictMode>
-      <h1>Portfolio</h1>
       <Header />
-      <About />
-      <Projects />
-      <Contact />
+      <div className='page'>
+        <About />
+        <Projects />
+        <Contact />
+      </div>
     </React.StrictMode>,
     document.getElementById('root')
   );

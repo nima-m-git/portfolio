@@ -1,0 +1,55 @@
+//    Format   \\
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+//      Header      \\
+header nav {
+    background: rgba(196, 12, 196, 0.418);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+}
+
+header li {
+    margin: 20px;
+}
+
+.page {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+
+//      About       \\
+.about.container {
+    height: 500px;
+    color: white;
+
+    background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
