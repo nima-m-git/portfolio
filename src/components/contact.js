@@ -57,9 +57,7 @@ class ContactForm extends React.Component {
                             onChange={this.handleChange} 
                             required />
                     </label>
-                    <input
-                        type='submit'
-                        value='Send'/>
+                    <button>Send</button>
                 </form>
             </div>
         )

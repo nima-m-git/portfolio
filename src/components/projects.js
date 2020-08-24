@@ -18,9 +18,9 @@ const createProjectTile = ({background, name, techs, codeURL, viewURL}) => {
 const ProjectTiles = () => {
     return (
         <div className='projectTiles container'>
+            <h2>Projects</h2>
             <div className='projects'>
-                <h2>Projects</h2>
-                <div className='projectTiles'>
+                <div className='projectGroups'>
                     {/* DRY ** nested map? */}
                     <div className='projectGroup'>
                         <h3>Applications</h3>
