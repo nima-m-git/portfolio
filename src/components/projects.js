@@ -51,48 +51,49 @@ const Technologies = () => {
     return (
         <div className='technologies container'>
             <h2>Technologies</h2>
-            <div className='programming techs'>
-                <h3>Programming</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>Javascript</li>
-                </ul>
+            <div className='techs-container'>
+                <div className='programming techs'>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div className='framework techs'>
+                    <h3>Frameworks</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Node</li>
+                        <li>Django</li>
+                    </ul>
+                </div>
+                <div className='design techs'>
+                    <h3>Design</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Sass</li>
+                    </ul>
+                </div>
+                <div className='databases techs'>
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>sqlite3</li>
+                        <li>Firestore</li>
+                    </ul>
+                </div>
+                <div className='other techs'>
+                    <h3>Software & Tools</h3>
+                    <ul>
+                        <li>WebPack</li>
+                        <li>Firebase</li>
+                        <li>Git</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
             </div>
-            <div className='framework techs'>
-                <h3>Frameworks</h3>
-                <ul>
-                    <li>React</li>
-                    <li>Node</li>
-                    <li>Django</li>
-                </ul>
-            </div>
-            <div className='design techs'>
-                <h3>Design</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>Sass</li>
-                </ul>
-            </div>
-            <div className='databases techs'>
-                <h3>Databases</h3>
-                <ul>
-                    <li>PostgreSQL</li>
-                    <li>MySQL</li>
-                    <li>sqlite3</li>
-                    <li>Firestore</li>
-                </ul>
-            </div>
-            <div className='other techs'>
-                <h3>Software & Tools</h3>
-                <ul>
-                    <li>WebPack</li>
-                    <li>Firebase</li>
-                    <li>Git</li>
-                    <li>Firebase</li>
-                </ul>
-            </div>
-            
         </div>
     )
 }

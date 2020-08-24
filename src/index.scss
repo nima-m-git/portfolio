@@ -6,17 +6,13 @@
     font-family: sans-serif;
     font-weight: 300;
 
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 ul {
     list-style: none;
-}
-
-li {
-    margin-right: 0.5em;
 }
 
 a {
@@ -28,6 +24,9 @@ a {
 //      Header      \\
 header nav {
     background: rgb(196, 12, 196);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
     position: fixed;
     top: 0;
     width: 100%;
@@ -64,7 +63,7 @@ header li {
 
 h1 {
     text-align: center;
-    color: red;
+    color: rgb(132, 214, 37);
     font-weight: 700;
 }
 
@@ -91,22 +90,22 @@ h4 {
 
     background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
     // background-attachment: fixed;
+
+    .aboutText {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 77vw;
+        height: 80%;
+        margin: auto;
+        font-size: 1.2em;
+    }
+    
+    .aboutText big {
+        font-size: 2em;
+    }
 }    
-
-.aboutText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 77vw;
-    height: 80%;
-    margin: auto;
-    font-size: 1.2em;
-}
-
-.aboutText big {
-    font-size: 2em;
-}
 
 
 //      Portfolio       \\
@@ -123,14 +122,33 @@ h4 {
 
 .technologies {
     border: 1px solid rgb(196, 12, 196);
-}
 
-.techs {
-    margin: 1em 0;
-}
+    // .techs-container {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
 
-.techs ul{
-    display: flex;
+    h3 {
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        margin: 0 1em;
+    }
+
+    .techs {
+        margin: 2em 0;
+    }
+    
+    .techs ul{
+        display: flex;
+    }
 }
 
 .projects {
@@ -142,10 +160,17 @@ h4 {
     border: 1px solid blue;
 }
 
+.projectGroup ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .projectTile {
     margin-bottom: 1em;
     border: 1px dotted grey;
     height: 15em;
+    flex-basis: 80%;
 }
 
 
@@ -176,4 +201,41 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+
+//         Media Queries        \\
+@media (min-width: 680px) {
+    .projectTile {
+        flex-basis: 45%;
+    }
+
+    .projectTile {
+        margin: 0.5em 0.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tech-projects-container {
+        flex-direction: row;
+    }
+
+    .projectTiles {
+        flex: 1;
+    }
+
+    .projectTile {
+        flex-basis: 30%;
+    }
+
+    .technologies ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1400px) {
+    .projectTile {
+        flex-basis: 20%;
+    }
 }
