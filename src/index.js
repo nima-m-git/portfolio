@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import 'normalize.css';
 import './index.scss';
@@ -20,6 +19,11 @@ ReactDOM.render(
         <Projects />
         <Contact />
       </div>
+      <footer>
+          <div>
+              <p>Designed by yours truly</p>
+          </div>
+      </footer>
     </React.StrictMode>,
     document.getElementById('root')
   );

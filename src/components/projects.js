@@ -2,19 +2,63 @@ import React from 'react';
 
 import { projects } from './projects/project_list.js'
 
+const createProjectTile = ({background, name, techs, codeURL, viewURL}) => {
+    return (
+        <li style={{ backgroundImage: `url(${background})` }} key={name} className='projectTile'>
+            <h4>{name}</h4>
+            <ul className='techs'>{ console.log(Array.isArray(techs)) }</ul>
+            <div className='viewURLs'>
+                <a href={codeURL}>View Code</a>
+                <a href={viewURL}>View Project</a>
+            </div>
+        </li>
+    )
+}
+
+const ProjectTiles = () => {
+    return (
+        <div className='projectTiles container'>
+            <div className='projects'>
+                <h2>Projects</h2>
+                <div className='projectTiles'>
+                    {/* DRY ** nested map? */}
+                    <div className='projectGroup'>
+                        <h3>Applications</h3>
+                        <ul>
+                            { projects.applications.map(project => createProjectTile(project)) }
+                        </ul>
+                    </div>
+                    <div className='projectGroup'>
+                        <h3>Clones</h3>
+                        <ul>
+                            { projects.clones.map(project => createProjectTile(project))}
+                        </ul>
+                    </div>
+                    <div className='projectGroup'>
+                        <h3>Misc</h3>
+                        <ul>
+                            { projects.misc.map(project => createProjectTile(project))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 
 const Technologies = () => {
     return (
         <div className='technologies container'>
             <h2>Technologies</h2>
-            <div className='programming-techs'>
+            <div className='programming techs'>
                 <h3>Programming</h3>
                 <ul>
                     <li>Python</li>
                     <li>Javascript</li>
                 </ul>
             </div>
-            <div className='framework-techs'>
+            <div className='framework techs'>
                 <h3>Frameworks</h3>
                 <ul>
                     <li>React</li>
@@ -22,7 +66,7 @@ const Technologies = () => {
                     <li>Django</li>
                 </ul>
             </div>
-            <div className='design-techs'>
+            <div className='design techs'>
                 <h3>Design</h3>
                 <ul>
                     <li>HTML5</li>
@@ -30,7 +74,7 @@ const Technologies = () => {
                     <li>Sass</li>
                 </ul>
             </div>
-            <div className='databases-techs'>
+            <div className='databases techs'>
                 <h3>Databases</h3>
                 <ul>
                     <li>PostgreSQL</li>
@@ -39,7 +83,7 @@ const Technologies = () => {
                     <li>Firestore</li>
                 </ul>
             </div>
-            <div className='other-techs'>
+            <div className='other techs'>
                 <h3>Software & Tools</h3>
                 <ul>
                     <li>WebPack</li>
@@ -54,45 +98,15 @@ const Technologies = () => {
 }
 
 
-const createProjectTile = ({background, name, techs, codeURL, viewURL}) => {
-    return (
-        <li styles={{ backgroundImage: `url(${background})` }}>
-            <h4>{name}</h4>
-            <p className='techs'>{techs}</p>
-            <div className='viewURLs'>
-                <a href={codeURL}>View Code</a>
-                <a href={viewURL}>View Project</a>
-            </div>
-        </li>
-    )
-}
-
-
 const Projects = () => {
     return (
-        <div className='Projects'>
-            <Technologies />
-            <div className='projectTiles'>
-                {/* DRY ** nested map? */}
-                <div className='applications'>
-                    <h4>Applications</h4>
-                    <ul>
-                        { projects.applications.map(project => createProjectTile(project)) }
-                    </ul>
-                </div>
-                <div className='clones'>
-                    <h4>Applications</h4>
-                    <ul>
-                        { projects.clones.map(project => createProjectTile(project))}
-                    </ul>
-                </div>
-                <div className='misc'>
-                    <h4>Applications</h4>
-                    <ul>
-                        { projects.misc.map(project => createProjectTile(project))}
-                    </ul>
-                </div>
+        <div className='portfolio container'>
+            <h1>Portfolio</h1>
+            <div className='tech-projects-container'>
+                <Technologies />
+                <ProjectTiles />
             </div>
+
         </div>
     )
 }

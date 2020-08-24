@@ -5,10 +5,18 @@
     box-sizing: border-box;
     font-family: sans-serif;
     font-weight: 300;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 ul {
     list-style: none;
+}
+
+li {
+    margin-right: 0.5em;
 }
 
 a {
@@ -19,7 +27,7 @@ a {
 
 //      Header      \\
 header nav {
-    background: rgba(196, 12, 196, 0.418);
+    background: rgb(196, 12, 196);
     position: fixed;
     top: 0;
     width: 100%;
@@ -36,9 +44,42 @@ header li {
     margin: 20px;
 }
 
+.logo {
+    padding-left: 0.5em;
+}
+
+
+//      Body        \\
 .page {
     margin-top: 80px;
+}
+
+.page > * {
+    margin-bottom: 2em;
+}
+
+.container {
     padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    font-weight: 700;
+}
+
+h2 {
+    text-decoration: underline;
+    color: blue;
+    text-align: center;
+}
+
+h3 {
+    color: rgb(189, 29, 189);
+}
+
+h4 {
+
 }
 
 
@@ -46,10 +87,93 @@ header li {
 .about.container {
     height: 500px;
     color: white;
+    padding: 20px 10px;
 
     background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
+    // background-attachment: fixed;
+}    
+
+.aboutText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 77vw;
+    height: 80%;
+    margin: auto;
+    font-size: 1.2em;
+}
+
+.aboutText big {
+    font-size: 2em;
+}
+
+
+//      Portfolio       \\
+.portfolio {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.technologies {
+    border: 1px solid rgb(196, 12, 196);
+}
+
+.techs {
+    margin: 1em 0;
+}
+
+.techs ul{
+    display: flex;
+}
+
+.projects {
+    text-align: center;
+    border: 1px solid rgb(196, 12, 196);
+}
+
+.projectGroup {
+    border: 1px solid blue;
+}
+
+.projectTile {
+    margin-bottom: 1em;
+    border: 1px dotted grey;
+    height: 15em;
+}
+
+
+//      Contact     \\
+.form {
+    margin: auto;
+    width: 80%;
+    border: 1px solid cyan;
+}
+
+.contact {
+    margin-bottom: 0;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10em;
+}
+
+
+//      Footer      \\
+footer {
+    color: white;
+    background: black;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }

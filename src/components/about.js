@@ -4,14 +4,16 @@ import React from 'react';
 const About = () => {
     return (
         <div className='about container'>
-            <h1>Hello World</h1>
-            <div className='headshot'>
-                <img src='' alt='headshot pic'></img>
-            </div>
             <section className='aboutText'>
+                <p><big>Hello,</big></p>
                 <p>
-                    Hi, my name is Nima. I am a fullstack software developer.
-                    <br></br>My life is blah blah blah lorem ipsum. 
+                    <br></br>
+                    I'm Nima, a fullstack software developer from Toronto.
+                    <br></br>This is a bit of my background history, interests, and education.
+                    And this is why i chose software development 
+                </p>
+                <p>
+                    Need something built? Want to collbaroate on a project? Just chat? <a href=''>Send me a message</a>
                 </p>
             </section>
         </div>
