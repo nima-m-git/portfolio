@@ -8,11 +8,19 @@ $neon-orange: #fd5f00;
 $radius: 15px;
 $border-width: 3px;
 
+
 //      Mixin       \\
 @mixin aspect-ratio($width, $height) {
     overflow: hidden;
     height: 0;
     padding-top: ($width / $height) * 100%;
+}
+
+
+//      Font        \\
+@font-face {
+    font-family: 'neon';
+    src: url('./fonts/neon_glow/NEON GLOW.otf');
 }
 
 
@@ -39,35 +47,6 @@ a {
 }
 
 
-//      Header      \\
-header nav {
-    background: black;
-    color: $neon-purple;
-    border: $border-width solid $neon-blue;
-    font-size: 1.2em;
-    font-weight: 500;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-links {
-    display: flex;
-}
-
-header li {
-    margin: 20px;
-}
-
-.logo {
-    padding-left: 0.5em;
-}
-
-
 //      Body        \\
 .page {
     margin-top: 5em;
@@ -86,24 +65,69 @@ header li {
 h1 {
     text-align: center;
     color: $neon-green;
-    font-weight: 700;
+    font-weight: 500;
+    font-family: 'neon';
+    font-size: 2.5em;
 }
 
 h2 {
     text-decoration: underline;
     color: $neon-cyan;
     text-align: center;
+    margin-bottom: 1em;
+    font-size: 2em;
+    font-family: 'neon';
 }
 
 h3 {
     color: $neon-purple;
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    font-family: 'neon';
+    font-weight: 800;
 }
+
+
+//      Header      \\
+header nav {
+    background: black;
+    border: $border-width solid $neon-blue;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-item a {
+    font-size: 1.5em;
+    font-weight: 800;
+    font-family: 'neon';
+    color: $neon-green;
+}
+
+header li {
+    margin: 0.8em;
+}
+
+.logo {
+    padding-left: 0.5em;
+}
+
 
 //      About       \\
 .about {
     height: 500px;
     color: white;
     padding: 20px 10px;
+    position: relative;
 
     background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
     background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
@@ -126,8 +150,6 @@ h3 {
         top: 2em;
         left: 0;
         right: 0;
-        // width: 100%;
-        // height: 100%;
     }
     
     .aboutText big {
@@ -151,6 +173,7 @@ h3 {
 .technologies {
     border: $border-width solid $neon-purple;
     border-radius: $radius;
+    box-shadow: 3px 3px 3px 3px #ee00ff7e;
 
     margin: 0 auto 5em;
 
@@ -183,7 +206,8 @@ h3 {
 }
 
 .projectGroup {
-    border: 1px solid $neon-blue;
+    border: 2px solid $neon-blue;
+    border-radius: $radius;
 }
 
 .projectGroup ul {
@@ -200,13 +224,30 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    font-size: 1.5em;
-    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: $neon-green;
+    border-radius: 8px;
+
+    li, a, h4 {
+        font-weight: 500;
+        width: max-content;
+        background: rgba(0, 0, 0, 0.568);
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid $neon-green;
+    }
+
+    h4 {
+        margin: 0 auto;
+        font-size: 1.3em;
+    }
 }
 
 .viewURLs {
     display: flex;
     justify-content: space-around;
+    font-size: 0.8em;
 }
 
 
@@ -217,6 +258,7 @@ h3 {
     border: $border-width solid $neon-cyan;
     border-radius: $radius;
     min-height: 300px;
+    max-width: 80vw;
     display: flex;
     flex-direction: column;
     padding: 40px;
