@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "40f380bc8d54864e9f3dcaa1bf0a7f78",
+    "revision": "9647cb6765144d6ba9830b40bbc1b5ba",
     "url": "/nima-m-git/portfolio/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nima-m-git/portfolio/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "3a0c7623a845c9c57d7d",
-    "url": "/nima-m-git/portfolio/static/css/main.880897bb.chunk.css"
+    "revision": "9758e77686426112de96",
+    "url": "/nima-m-git/portfolio/static/css/main.8066e468.chunk.css"
   },
   {
     "revision": "484498d0ef8ee733ffc3",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nima-m-git/portfolio/static/js/2.a78aec96.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3a0c7623a845c9c57d7d",
-    "url": "/nima-m-git/portfolio/static/js/main.dd1615de.chunk.js"
+    "revision": "9758e77686426112de96",
+    "url": "/nima-m-git/portfolio/static/js/main.7a85a2cc.chunk.js"
   },
   {
     "revision": "d581b3a5f559e2db1ab9",
