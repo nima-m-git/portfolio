@@ -4,7 +4,11 @@ import { projects } from './projects/project_list.js'
 
 const createProjectTile = ({background, name, techs, codeURL, viewURL}) => {
     return (
-        <li style={{ backgroundImage: `url(${background})` }} key={name} className='projectTile'>
+        <li 
+            style={{ backgroundImage: `
+                linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3))
+                ,url(${background})` }} 
+            key={name} className='projectTile'>
             <h4>{name}</h4>
             <ul className='techs'>{ console.log(Array.isArray(techs)) }</ul>
             <div className='viewURLs'>
