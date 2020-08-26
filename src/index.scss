@@ -1,12 +1,15 @@
 //      Variables       \\
-$neon-green: #74ee15;
+$neon-green: #6fff00;
 $neon-purple: #f000ff;
-$neon-cyan: #4deeea;
+$neon-cyan: #00fffb;
 $neon-blue: #001eff;
 $neon-orange: #fd5f00;
+$neon-pink: #ff00bb;
+$neon-yellow: #ccff15;
 
 $radius: 15px;
 $border-width: 3px;
+$border-style: groove;
 
 
 //      Mixin       \\
@@ -14,6 +17,17 @@ $border-width: 3px;
     overflow: hidden;
     height: 0;
     padding-top: ($width / $height) * 100%;
+}
+
+// separate into own module 
+@mixin changing-font {
+    margin: auto;
+    animation: fadeIn 1s, flow 6s linear infinite; 
+    background: linear-gradient(-60deg, $neon-purple 0%, $neon-blue 20%,  $neon-cyan 40%, $neon-green 60%, $neon-pink 80%, $neon-purple 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
 }
 
 
@@ -32,7 +46,7 @@ $border-width: 3px;
     font-family: sans-serif;
     font-weight: 300;
 
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -61,7 +75,7 @@ a {
 .container {
     padding: 20px;
     max-width: 95vw;
-    margin: auto;
+    margin: 0 auto;
 }
 
 h1 {
@@ -84,16 +98,16 @@ h2 {
 h3 {
     color: $neon-purple;
     margin: 0.5em 0;
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-family: 'neon';
-    font-weight: 800;
+    font-weight: 1100;
 }
 
 
 //      Header      \\
 header nav {
     background: black;
-    border: $border-width solid $neon-blue;
+    border: 5px double $neon-blue;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -115,6 +129,16 @@ header nav {
     font-weight: 800;
     font-family: 'neon';
     color: $neon-green;
+    padding: 5px;
+}
+
+.nav-item a:hover {
+    color: #6fff00a9;
+}
+
+.nav-item a:active {
+    border: 2px dotted $neon-green;
+    border-radius: 15px;
 }
 
 header li {
@@ -123,6 +147,7 @@ header li {
 
 .logo {
     display: none;
+    @include changing-font;
 }
 
 
@@ -136,7 +161,7 @@ header li {
     background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
     background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
     background-size: cover;
-    background-position: center;
+    background-position: center 40px;
     background-attachment: fixed;
     @include aspect-ratio(560, 933);
 
@@ -175,7 +200,7 @@ header li {
 }
 
 .technologies {
-    border: $border-width solid $neon-purple;
+    border: $border-width $border-style $neon-purple;
     border-radius: $radius;
 
     margin-bottom: 5em;
@@ -206,7 +231,7 @@ header li {
 
 .projectTiles {
     text-align: center;
-    border: $border-width solid $neon-purple;
+    border: $border-width $border-style $neon-purple;
     border-radius: $radius;
 }
 
@@ -224,7 +249,7 @@ header li {
 
 .projectTile {
     margin-bottom: 1em;
-    border: 1px dotted grey;
+    border: 3px $border-style $neon-blue;
     height: 200px;
     flex-basis: 80%;
     display: flex;
@@ -238,15 +263,16 @@ header li {
     li, a, h4 {
         font-weight: 500;
         width: max-content;
-        background: rgba(0, 0, 0, 0.568);
-        padding: 5px;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 0.4em;
         border-radius: 10px;
-        border: 1px solid $neon-green;
+        border: 1px outset $neon-green;
     }
 
     h4 {
         margin: 0 auto;
-        font-size: 1.3em;
+        font-size: 1.2em;
+        border-style: ridge;
     }
 }
 
@@ -261,7 +287,7 @@ header li {
 .form {
     margin: auto;
     width: 30em;
-    border: $border-width solid $neon-cyan;
+    border: $border-width $border-style $neon-cyan;
     border-radius: $radius;
     min-height: 300px;
     max-width: 80vw;
@@ -324,7 +350,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border-top: 1px solid $neon-purple;
+    border-top: 2px $border-style $neon-blue;
 }
 
 
@@ -372,6 +398,20 @@ footer {
 
 @media (min-width: 1400px) {
     .projectTile {
-        flex-basis: 20%;
+        flex-basis: 22%;
+    }
+}
+
+
+//      Animations      \\
+
+// separate into own module
+/*  Color flow */
+@keyframes flow {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 200%;
     }
 }

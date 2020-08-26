@@ -12,8 +12,8 @@ const createProjectTile = ({background, name, techs, codeURL, viewURL}) => {
             <h4>{name}</h4>
             <ul className='techs'>{ console.log(Array.isArray(techs)) }</ul>
             <div className='viewURLs'>
-                <a href={codeURL}>View Code</a>
-                <a href={viewURL}>View Project</a>
+                <a href={codeURL} target='_blank'>View Code</a>
+                <a href={viewURL} target='_blank'>View Project</a>
             </div>
         </li>
     )
