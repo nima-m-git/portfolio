@@ -18,7 +18,6 @@ import SassIcon from '../icons/icons8-sass.svg';
 import MySQLIcon from '../icons/mysql-icon.svg';
 
 
-
 const createProjectTile = ({background, name, techs, codeURL, viewURL}) => {
     return (
         <li 
@@ -165,7 +164,6 @@ class Projects extends React.Component {
         this.filterOff = this.filterOff.bind(this);
     }
 
-
     filterTech(tech) {
         this.setState({
             filterOn: true,
@@ -179,12 +177,16 @@ class Projects extends React.Component {
             tech: null,
         })
     }
-    
 
     render() {
         return (
             <div className='portfolio container'>
                 <h1>Portfolio</h1>
+                {this.state.filterOn && 
+                    <div className='view-all' >
+                        <button onClick={this.filterOff}>View All</button>
+                    </div>
+                }
                 <div className='tech-projects-container'>
                     <Technologies 
                         filterTech={this.filterTech}/>
