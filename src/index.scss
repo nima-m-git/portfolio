@@ -209,23 +209,28 @@ header li {
         text-align: center;
     }
 
-    ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    li {
-        margin: 0 1em;
-        line-height: 2em;
-    }
-
     .techs {
         margin: 2em 0;
     }
     
-    .techs ul{
+    .techs ul {
         display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .techs li {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 1em;
+        line-height: 2em;
+        font-size: 1.2em;
+    }
+
+    .icon {
+        margin-right: 1em;
+        height: 2.5em;
+        width: 2.5em;
     }
 }
 
@@ -382,6 +387,10 @@ footer {
         align-items: flex-start;
     }
 
+    .technologies {
+        padding-bottom: 0;
+    }
+
     .projectTiles {
         flex: 1;
     }
@@ -392,7 +401,6 @@ footer {
 
     .technologies ul {
         flex-direction: column;
-        align-items: center;
     }
 }
 
