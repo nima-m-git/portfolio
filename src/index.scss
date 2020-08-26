@@ -6,6 +6,7 @@ $neon-blue: #001eff;
 $neon-orange: #fd5f00;
 $neon-pink: #ff00bb;
 $neon-yellow: #ccff15;
+$green-hover: #6fff00a9;
 
 $radius: 15px;
 $border-width: 3px;
@@ -133,7 +134,7 @@ header nav {
 }
 
 .nav-item a:hover {
-    color: #6fff00a9;
+    color: $green-hover;
 }
 
 .nav-item a:active {
@@ -265,7 +266,7 @@ header li {
     color: $neon-green;
     border-radius: 8px;
 
-    li, a, h4 {
+    a, h4 {
         font-weight: 500;
         width: max-content;
         background: rgba(0, 0, 0, 0.4);
@@ -278,6 +279,11 @@ header li {
         margin: 0 auto;
         font-size: 1.2em;
         border-style: ridge;
+        cursor: default;
+    }
+
+    a:hover {
+        color: $green-hover;
     }
 }
 
@@ -391,22 +397,20 @@ footer {
         padding-bottom: 0;
     }
 
-    .projectTiles {
-        flex: 1;
-    }
-
-    .projectTile {
-        flex-basis: 30%;
-    }
-
     .technologies ul {
         flex-direction: column;
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
     .projectTile {
-        flex-basis: 22%;
+        flex-basis: 30%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .projectTile {
+        flex-basis: 23%;
     }
 }
 

@@ -88,7 +88,7 @@ const clones = [
         viewURL: 'https://nima-m-git.github.io/newsweek-mock/',
     },
     {
-        name: 'Thenextweb',
+        name: 'TheNextWeb',
         background: 'https://www.atomicreach.com/hubfs/Atomic_Reach_May2018/images/tnw-thenextweb-logo.png',
         techs: ['CSS'],
         codeURL: 'https://github.com/nima-m-git/thenextweb-mock',
