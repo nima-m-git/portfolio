@@ -84,7 +84,6 @@ const Technologies = () => {
                     <ul>
                         <li>PostgreSQL</li>
                         <li>MySQL</li>
-                        <li>sqlite3</li>
                         <li>Firestore</li>
                     </ul>
                 </div>
