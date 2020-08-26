@@ -56,7 +56,7 @@ const applications = [
         viewURL: 'https://nima-m-git.github.io/tic-tac-toe/',
     },
     {
-        name: 'Etch-A-Sketcb',
+        name: 'Etch-A-Sketch',
         background: './media/project-backgrounds/etch-a-sketch.jpg',
         techs: ['Javascript', 'CSS'],
         codeURL: 'https://github.com/nima-m-git/etch-a-sketch',
@@ -137,6 +137,9 @@ const misc = [
 ]
 
 
-const projects = {applications, clones, misc}
+const projects = [applications, clones, misc]
+// change: array name to string? revert to object and use key names?
+// reduce redundancy
+const groupNames = ['applications', 'clones', 'misc']
 
-export { projects }
+export { projects, groupNames }

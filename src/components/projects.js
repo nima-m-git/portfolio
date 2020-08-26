@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { projects } from './projects/project_list.js';
+import { projects, groupNames } from './projects/project_list.js';
 
-import WebPackIcon from '../icons/icons8-webpack.svg';
+import WebpackIcon from '../icons/icons8-webpack.svg';
 import FireStoreIcon from '../icons/icons8-cloud-firestore.svg';
 import CSS3Icon from '../icons/icons8-css3.svg';
 import DjangoIcon from '../icons/icons8-django.svg';
 import FireBaseIcon from '../icons/icons8-firebase.svg';
 import GitIcon from '../icons/icons8-git.svg';
 import HTML5Icon from '../icons/icons8-html-5.svg';
-import JavaScriptIcon from '../icons/icons8-javascript.svg';
+import JavascriptIcon from '../icons/icons8-javascript.svg';
 import NodeJSIcon from '../icons/icons8-nodejs.svg';
 import PostgreSQLIcon from '../icons/icons8-postgresql.svg';
 import PythonIcon from '../icons/icons8-python.svg';
@@ -36,54 +36,47 @@ const createProjectTile = ({background, name, techs, codeURL, viewURL}) => {
     )
 }
 
-const ProjectTiles = () => {
+const ProjectTiles = (props) => {
+    const filteredProjects = (!props.filterOn) 
+        ? projects 
+        : projects.map(group => (
+            group.filter(project => project.techs.includes(props.tech))
+            ))
+        
     return (
         <div className='projectTiles container'>
             <h2>Projects</h2>
             <div className='projects'>
-                <div className='projectGroups'>
-                    {/* DRY ** nested map? */}
+                {filteredProjects.map((group, i) => (
                     <div className='projectGroup'>
-                        <h3>Applications</h3>
+                        <h3 style={{'text-transform': 'capitalize'}}>{ groupNames[i] }</h3>
                         <ul>
-                            { projects.applications.map(project => createProjectTile(project)) }
+                            { group.map(project => createProjectTile(project)) }
                         </ul>
                     </div>
-                    <div className='projectGroup'>
-                        <h3>Clones</h3>
-                        <ul>
-                            { projects.clones.map(project => createProjectTile(project))}
-                        </ul>
-                    </div>
-                    <div className='projectGroup'>
-                        <h3>Misc</h3>
-                        <ul>
-                            { projects.misc.map(project => createProjectTile(project))}
-                        </ul>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     )
 }
 
 
-const Technologies = () => {
+const Technologies = (props) => {
     return (
         <div className='technologies container'>
             <h2>Technologies</h2>
             <div className='techs-container'>
+                {/* Combine Techs into fxn -- DRY */}
                 <div className='programming techs'>
                     <h3>Programming</h3>
                     <ul>
                         <li>
-                            <span><img src={PythonIcon} alt=' icon'className='icon'/></span>
-                            
-                            <span>Python</span>                            
+                            <img src={PythonIcon} alt=' icon'className='icon'/>
+                            <span onClick={() => props.filterTech('Python')}>Python</span>                            
                         </li>
                         <li>
-                            <img src={JavaScriptIcon} alt=' icon'className='icon'/>
-                            <span>Javascript</span>                            
+                            <img src={JavascriptIcon} alt=' icon'className='icon'/>
+                            <span onClick={() => props.filterTech('Javascript')}>Javascript</span>                            
                         </li>
                     </ul>
                 </div>
@@ -92,30 +85,30 @@ const Technologies = () => {
                     <ul>
                         <li>
                             <img src={ReactIcon} alt=' icon'className='icon'/>
-                            <span>React</span>                            
+                            <span onClick={() => props.filterTech('React')}>React</span>                            
                         </li>
                         <li>
                             <img src={NodeJSIcon} alt=' icon'className='icon'/>
-                            <span>Node</span>                            
+                            <span onClick={() => props.filterTech('Node')}>Node</span>                            
                         </li>
                         <li>
                             <img src={DjangoIcon} alt=' icon'className='icon'/>
-                            <span>Django</span>                            
+                            <span onClick={() => props.filterTech('Django')}>Django</span>                            
                         </li>
                     </ul>
                 </div>
                 <div className='design techs'>
                     <h3>Design</h3>
                     <ul>
-                        <li>
+                        <li onClick={() => props.filterTech('HTML')}>
                             <img src={HTML5Icon} alt=' icon'className='icon'/>
                             <span>HTML5</span>                            
                         </li>
-                        <li>
+                        <li onClick={() => props.filterTech('CSS')}>
                             <img src={CSS3Icon} alt=' icon'className='icon'/>
                             <span>CSS3</span>                            
                         </li>
-                        <li>
+                        <li onClick={() => props.filterTech('Sass')}>
                             <img src={SassIcon} alt=' icon'className='icon'/>
                             <span>Sass</span>                            
                         </li>
@@ -124,26 +117,26 @@ const Technologies = () => {
                 <div className='databases techs'>
                     <h3>Databases</h3>
                     <ul>
-                        <li>
+                        <li onClick={() => props.filterTech('PostgreSQL')}>
                             <img src={PostgreSQLIcon} alt=' icon'className='icon'/>
                             <span>PostgreSQL</span>                            
                         </li>
-                        <li>
+                        <li onClick={() => props.filterTech('MySQL')}>
                             <img src={MySQLIcon} alt=' icon'className='icon'/>
                             <span>MySQL</span>                            
                         </li>
-                        <li>
+                        <li onClick={() => props.filterTech('FireStore')}>
                             <img src={FireStoreIcon} alt=' icon'className='icon'/>
                             <span>FireStore</span>                            
                         </li>
                     </ul>
                 </div>
                 <div className='other techs'>
-                    <h3>Software & Tools</h3>
+                    <h3>Softwares & Tools</h3>
                     <ul>
                         <li>
-                            <img src={WebPackIcon} alt='webpack icon' className='icon'/>
-                            <span>WebPack</span>                            
+                            <img src={WebpackIcon} alt='webpack icon' className='icon'/>
+                            <span>Webpack</span>                            
                         </li>
                         <li>
                             <img src={FireBaseIcon} alt=' icon'className='icon'/>
@@ -161,17 +154,49 @@ const Technologies = () => {
 }
 
 
-const Projects = () => {
-    return (
-        <div className='portfolio container'>
-            <h1>Portfolio</h1>
-            <div className='tech-projects-container'>
-                <Technologies />
-                <ProjectTiles />
-            </div>
+class Projects extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            filterOn: false,
+            tech: null,
+        }
+        this.filterTech = this.filterTech.bind(this);
+        this.filterOff = this.filterOff.bind(this);
+    }
 
-        </div>
-    )
+
+    filterTech(tech) {
+        this.setState({
+            filterOn: true,
+            tech,
+        }) 
+    }
+
+    filterOff() {
+        this.setState({
+            filterOn: false,
+            tech: null,
+        })
+    }
+    
+
+    render() {
+        return (
+            <div className='portfolio container'>
+                <h1>Portfolio</h1>
+                <div className='tech-projects-container'>
+                    <Technologies 
+                        filterTech={this.filterTech}/>
+                    <ProjectTiles 
+                        filterOn={this.state.filterOn}
+                        tech={this.state.tech}/>
+                </div>
+    
+            </div>
+        )
+    }
+
 }
 
 

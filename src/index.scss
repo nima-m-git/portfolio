@@ -84,7 +84,7 @@ h1 {
     color: $neon-green;
     font-weight: 500;
     font-family: 'neon';
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 h2 {
@@ -92,14 +92,14 @@ h2 {
     color: $neon-cyan;
     text-align: center;
     margin-bottom: 1em;
-    font-size: 2em;
+    font-size: 2.2em;
     font-family: 'neon';
 }
 
 h3 {
     color: $neon-purple;
     margin: 0.5em 0;
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-family: 'neon';
     font-weight: 1100;
 }
@@ -159,8 +159,8 @@ header li {
     padding: 20px 10px;
     position: relative;
 
-    background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
-    background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
+    // background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
+    // background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
     background-size: cover;
     background-position: center 40px;
     background-attachment: fixed;
@@ -223,9 +223,16 @@ header li {
     .techs li {
         display: flex;
         justify-content: flex-start;
+        align-items: center;
         margin: 0 1em;
         line-height: 2em;
         font-size: 1.2em;
+        cursor: pointer;
+        color: $neon-yellow;
+    }
+
+    .techs li:hover {
+        text-decoration: underline;
     }
 
     .icon {
