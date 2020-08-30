@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+
+import axios from 'axios';
+const url = 'https://o1newthge3.execute-api.us-east-2.amazonaws.com/dev/static-site-mailer';
 
 
 class ContactForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.initialState = {
             name: '',
             email: '',
             message: ''
+        }
+        this.state = {
+            ...this.initialState
         };
         
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.resetForm = this.resetForm.bind(this);
     }
+
 
     handleChange(e) {
         this.setState({
@@ -20,9 +28,59 @@ class ContactForm extends React.Component {
         })
     }
 
+
     handleSubmit(e) {
         e.preventDefault();
-        // Submit Email
+        
+        const data = {
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message
+        }
+
+        console.log(JSON.stringify(data))
+
+        const req = new XMLHttpRequest();
+        req.open('POST', url, true);
+        req.setRequestHeader('Accept', 'application/json; charset=utf-8');
+        req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    
+    
+        req.send(JSON.stringify(data));
+    
+        req.onloadend = response => {
+            if (response.target.status === 200) {
+              // The form submission was successful
+              this.resetForm();
+              alert('Thanks for the message. I’ll be in touch shortly.');
+            } else {
+              // The form submission failed
+              alert('Something went wrong');
+            //   console.error(JSON.parse(response.target.response).message);
+            }
+          };
+
+
+        // axios({
+        //     method: 'POST',
+        //     url:'http://localhost:3002/send',
+        //     data: this.state
+        // })
+        // .then((response) => {
+        //     if (response.data.status === 'success'){
+        //         alert('Message Sent. Check your inbox for a confirmation email (may have gone to spam).');
+        //         this.resetForm()
+        //     } else if (response.data.status === 'fail'){
+        //         alert('Message failed to send.')
+        //     }
+        // })
+        // .catch(error => console.log(error));
+    }
+
+    resetForm() {
+        this.setState({
+            ...this.initialState
+        })
     }
 
     render() {
@@ -30,6 +88,7 @@ class ContactForm extends React.Component {
             <div className='form container'>
                 <form 
                     onSubmit={this.handleSubmit}
+                    method='POST'
                     noValidate
                 >
                     <label>

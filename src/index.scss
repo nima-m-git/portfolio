@@ -9,6 +9,7 @@ $neon-yellow: #ccff15;
 $green-hover: #6fff00a9;
 $cyan-hover: #00fffbb7;
 $blue-glow: rgb(0, 0, 78);
+$cyan-glow: #004b49;
 
 $radius: 15px;
 $border-width: 3px;
@@ -333,6 +334,7 @@ header li {
     margin: auto;
     width: 30em;
     border: $border-width $border-style $neon-cyan;
+    background: $cyan-glow;
     border-radius: $radius;
     min-height: 300px;
     max-width: 80vw;

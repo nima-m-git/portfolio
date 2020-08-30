@@ -47,6 +47,7 @@ const ProjectTiles = (props) => {
             <h2>Projects</h2>
             <div className='projects'>
                 {filteredProjects.map((group, i) => (
+                    
                     <div className='projectGroup'>
                         <h3 style={{'text-transform': 'capitalize'}}>{ groupNames[i] }</h3>
                         <ul>
