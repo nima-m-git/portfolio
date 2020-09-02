@@ -1,20 +1,19 @@
 import React from 'react';
-
-import { NavLink } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 const Header = () => {
     return (
         <header>
             <nav>
-                <h1 className='logo'>Neemz</h1>
+                <Link to='/'><h1 className='logo'>Neemz</h1></Link>
                 <ul className='nav-links'>
-                    <li className='nav-item'><a href='#'>About</a></li>
-                    <li className='nav-item'><a href='#'>Portfolio</a></li>
-                    <li className='nav-item'><a href='#'>Contact</a></li>
+                    <Link className='nav-item' to='/about'>About</Link>
+                    <Link className='nav-item' to='/portfolio'>Portfolio</Link>
+                    <Link className='nav-item' to='/contact'>Contact</Link>
                 </ul>
             </nav>
         </header>
     )
 }  
 
-export { Header }
+export default withRouter(Header);

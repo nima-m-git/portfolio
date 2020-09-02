@@ -203,4 +203,4 @@ class Projects extends React.Component {
 }
 
 
-export { Projects }
+export default Projects 

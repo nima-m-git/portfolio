@@ -135,7 +135,7 @@ header nav {
     justify-content: space-evenly;
 }
 
-.nav-item a {
+.nav-item {
     font-size: 1.5em;
     font-weight: 800;
     font-family: 'neon';
@@ -143,16 +143,16 @@ header nav {
     padding: 5px;
 }
 
-.nav-item a:hover {
+.nav-item:hover {
     color: $green-hover;
 }
 
-.nav-item a:active {
+.nav-item:active {
     border: 2px dotted $neon-green;
     border-radius: 15px;
 }
 
-header li {
+header Link {
     margin: 0.8em;
 }
 
@@ -164,12 +164,11 @@ header li {
 
 //      About       \\
 .about {
-    // height: 500px;
     color: white;
     position: relative;
 
     background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
-    background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
+    // background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
     background-size: cover;
     background-position: center 40px;
     background-attachment: fixed;
@@ -182,7 +181,6 @@ header li {
         justify-content: space-evenly;
         align-items: center;
         max-width: 70vw;
-        // height: 100%;
         margin: 0 auto;
         font-size: 1.2em;
 

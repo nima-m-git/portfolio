@@ -1,6 +1,5 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 
-import axios from 'axios';
 const url = 'https://o1newthge3.execute-api.us-east-2.amazonaws.com/dev/static-site-mailer';
 
 
@@ -50,31 +49,14 @@ class ContactForm extends React.Component {
     
         req.onloadend = response => {
             if (response.target.status === 200) {
-              // The form submission was successful
               this.resetForm();
               alert('Thanks for the message. I’ll be in touch shortly.');
             } else {
-              // The form submission failed
               alert('Something went wrong');
             //   console.error(JSON.parse(response.target.response).message);
             }
           };
 
-
-        // axios({
-        //     method: 'POST',
-        //     url:'http://localhost:3002/send',
-        //     data: this.state
-        // })
-        // .then((response) => {
-        //     if (response.data.status === 'success'){
-        //         alert('Message Sent. Check your inbox for a confirmation email (may have gone to spam).');
-        //         this.resetForm()
-        //     } else if (response.data.status === 'fail'){
-        //         alert('Message failed to send.')
-        //     }
-        // })
-        // .catch(error => console.log(error));
     }
 
     resetForm() {
@@ -133,4 +115,4 @@ const Contact = () => {
     )
 }
 
-export { Contact }
+export default Contact
