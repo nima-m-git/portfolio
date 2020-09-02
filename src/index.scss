@@ -60,8 +60,11 @@ ul {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 p {
@@ -145,6 +148,7 @@ header nav {
 
 .nav-item:hover {
     color: $green-hover;
+    text-decoration: none;
 }
 
 .nav-item:active {
@@ -162,37 +166,49 @@ header Link {
 }
 
 
-//      About       \\
-.about {
-    color: white;
-    position: relative;
-
-    background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
-    // background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
+//      Home        \\
+.home {
+    background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
     background-size: cover;
     background-position: center 40px;
     background-attachment: fixed;
     @include aspect-ratio(560, 933);
     overflow: scroll;
+    position: relative;
+}
 
-    .aboutText {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        max-width: 70vw;
-        margin: 0 auto;
-        font-size: 1.2em;
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 70vw;
+    margin: 0 auto;
+    font-size: 1.2em;
+    color: white;
 
-        position: absolute;
-        top: 4em;
-        left: 0;
-        right: 0;
-    }
-    
-    .aboutText big {
-        font-size: 2em;
-    }
+    position: absolute;
+    top: 4em;
+    left: 0;
+    right: 0;
+}
+
+.info big {
+    font-size: 2em;
+}
+
+
+//      About       \\
+.about {
+    position: relative;
+
+    background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
+
+    background-size: cover;
+    background-position: center 40px;
+    background-attachment: fixed;
+    @include aspect-ratio(560, 933);
+    overflow: scroll;
 }    
 
 
