@@ -1,26 +1,40 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.4d06d082.chunk.css",
-    "main.js": "/portfolio/static/js/main.0af21d04.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.0af21d04.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.d5d1dfa0.chunk.css",
+    "main.js": "/portfolio/static/js/main.ee9f6eec.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.ee9f6eec.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
     "static/css/2.764ccc25.chunk.css": "/portfolio/static/css/2.764ccc25.chunk.css",
-    "static/js/2.a78aec96.chunk.js": "/portfolio/static/js/2.a78aec96.chunk.js",
-    "static/js/2.a78aec96.chunk.js.map": "/portfolio/static/js/2.a78aec96.chunk.js.map",
+    "static/js/2.c0945bdb.chunk.js": "/portfolio/static/js/2.c0945bdb.chunk.js",
+    "static/js/2.c0945bdb.chunk.js.map": "/portfolio/static/js/2.c0945bdb.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.94a40dc6c687e9477bdc8af0d1fcad08.js": "/portfolio/precache-manifest.94a40dc6c687e9477bdc8af0d1fcad08.js",
+    "precache-manifest.84683f1d2bfe1323551247d528792466.js": "/portfolio/precache-manifest.84683f1d2bfe1323551247d528792466.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/portfolio/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.4d06d082.chunk.css.map": "/portfolio/static/css/main.4d06d082.chunk.css.map",
-    "static/js/2.a78aec96.chunk.js.LICENSE.txt": "/portfolio/static/js/2.a78aec96.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/portfolio/static/media/NEON GLOW.4c379f95.otf"
+    "static/css/main.d5d1dfa0.chunk.css.map": "/portfolio/static/css/main.d5d1dfa0.chunk.css.map",
+    "static/js/2.c0945bdb.chunk.js.LICENSE.txt": "/portfolio/static/js/2.c0945bdb.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/portfolio/static/media/NEON GLOW.4c379f95.otf",
+    "static/media/icons8-cloud-firestore.svg": "/portfolio/static/media/icons8-cloud-firestore.e9c75680.svg",
+    "static/media/icons8-css3.svg": "/portfolio/static/media/icons8-css3.1f9f8fdc.svg",
+    "static/media/icons8-django.svg": "/portfolio/static/media/icons8-django.4e173420.svg",
+    "static/media/icons8-firebase.svg": "/portfolio/static/media/icons8-firebase.a33afa2f.svg",
+    "static/media/icons8-git.svg": "/portfolio/static/media/icons8-git.0a27096e.svg",
+    "static/media/icons8-html-5.svg": "/portfolio/static/media/icons8-html-5.a522aecd.svg",
+    "static/media/icons8-javascript.svg": "/portfolio/static/media/icons8-javascript.f607a6b7.svg",
+    "static/media/icons8-nodejs.svg": "/portfolio/static/media/icons8-nodejs.d3deb2f6.svg",
+    "static/media/icons8-postgresql.svg": "/portfolio/static/media/icons8-postgresql.776dbdbd.svg",
+    "static/media/icons8-python.svg": "/portfolio/static/media/icons8-python.1a4e9768.svg",
+    "static/media/icons8-react.svg": "/portfolio/static/media/icons8-react.a75f9e03.svg",
+    "static/media/icons8-sass.svg": "/portfolio/static/media/icons8-sass.80ddcd5b.svg",
+    "static/media/icons8-webpack.svg": "/portfolio/static/media/icons8-webpack.b8878827.svg",
+    "static/media/mysql-icon.svg": "/portfolio/static/media/mysql-icon.963b162a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.209c2d7e.js",
     "static/css/2.764ccc25.chunk.css",
-    "static/js/2.a78aec96.chunk.js",
-    "static/css/main.4d06d082.chunk.css",
-    "static/js/main.0af21d04.chunk.js"
+    "static/js/2.c0945bdb.chunk.js",
+    "static/css/main.d5d1dfa0.chunk.css",
+    "static/js/main.ee9f6eec.chunk.js"
   ]
 }
