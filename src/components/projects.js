@@ -46,15 +46,15 @@ const ProjectTiles = (props) => {
         <div className='projectTiles container'>
             <h2>Projects</h2>
             <div className='projects'>
-                {filteredProjects.map((group, i) => (
-                    
-                    <div className='projectGroup'>
-                        <h3 style={{'text-transform': 'capitalize'}}>{ groupNames[i] }</h3>
-                        <ul>
-                            { group.map(project => createProjectTile(project)) }
-                        </ul>
-                    </div>
-                ))}
+                {filteredProjects.map((group, i) => {
+                    return group.length > 0 &&
+                        <div className='projectGroup'>
+                            <h3 style={{'text-transform': 'capitalize'}}>{ groupNames[i] }</h3>
+                            <ul>
+                                { group.map(project => createProjectTile(project)) }
+                            </ul>
+                        </div>
+                })}
             </div>
         </div>
     )

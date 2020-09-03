@@ -15,7 +15,7 @@ const Home = () => {
                     <p>
                         Need something built? Improved? Meaningful insights from data? Collbaroate on a project? Invest in an idea that could change the world? 
                         New friend? Chat about anything? 
-                        <a href='/contact'>Send me a message</a>
+                        <a href='/contact'> Send me a message</a>
                     </p>
                 </div>
 
