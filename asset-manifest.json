@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.aa262ab5.chunk.css",
-    "main.js": "/portfolio/static/js/main.bcf8edb1.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.bcf8edb1.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.1556aad5.chunk.css",
+    "main.js": "/portfolio/static/js/main.2f42a78d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.2f42a78d.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
     "static/css/2.764ccc25.chunk.css": "/portfolio/static/css/2.764ccc25.chunk.css",
     "static/js/2.97843c4f.chunk.js": "/portfolio/static/js/2.97843c4f.chunk.js",
     "static/js/2.97843c4f.chunk.js.map": "/portfolio/static/js/2.97843c4f.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.f392bc275545b33ec0a8d1c6494ee2b4.js": "/portfolio/precache-manifest.f392bc275545b33ec0a8d1c6494ee2b4.js",
+    "precache-manifest.28e077e0412c25eecd2f8c19b7978414.js": "/portfolio/precache-manifest.28e077e0412c25eecd2f8c19b7978414.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/portfolio/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.aa262ab5.chunk.css.map": "/portfolio/static/css/main.aa262ab5.chunk.css.map",
+    "static/css/main.1556aad5.chunk.css.map": "/portfolio/static/css/main.1556aad5.chunk.css.map",
     "static/js/2.97843c4f.chunk.js.LICENSE.txt": "/portfolio/static/js/2.97843c4f.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/portfolio/static/media/NEON GLOW.4c379f95.otf",
+    "static/media/index.scss": "/portfolio/static/media/dna.0747afb7.jpg",
     "static/media/icons8-cloud-firestore.svg": "/portfolio/static/media/icons8-cloud-firestore.e9c75680.svg",
     "static/media/icons8-css3.svg": "/portfolio/static/media/icons8-css3.1f9f8fdc.svg",
     "static/media/icons8-django.svg": "/portfolio/static/media/icons8-django.4e173420.svg",
@@ -34,7 +34,7 @@
     "static/js/runtime-main.209c2d7e.js",
     "static/css/2.764ccc25.chunk.css",
     "static/js/2.97843c4f.chunk.js",
-    "static/css/main.aa262ab5.chunk.css",
-    "static/js/main.bcf8edb1.chunk.js"
+    "static/css/main.1556aad5.chunk.css",
+    "static/js/main.2f42a78d.chunk.js"
   ]
 }
