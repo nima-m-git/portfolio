@@ -15,12 +15,12 @@ $radius: 15px;
 $border-width: 3px;
 $border-style: groove;
 $header-height: 80px;
-$footer-height: 70px;
+$footer-height: 40px;
 
 
 //      Mixin       \\
 @mixin aspect-ratio($width, $height) {
-    overflow: hidden;
+    // overflow: hidden;
     height: 100%;
     padding-top: ($width / $height) * 100%;
 }
@@ -83,7 +83,11 @@ p {
     margin-bottom: $footer-height;
     background: black;
     color: white;
-    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: scroll;
 }
 
 .page > * {
@@ -91,10 +95,9 @@ p {
 }
 
 .container {
-    padding: 40px 20px 100px;
+    padding: 40px 20px;
     max-width: 95vw;
     margin: 0 auto;
-    height: 100%;
 }
 
 h1 {
@@ -171,7 +174,6 @@ header Link {
 }
 
 .logo {
-    display: none;
     @include changing-font;
 }
 
@@ -184,6 +186,7 @@ header Link {
     background-attachment: fixed;
     position: relative;
     padding-top: 100%;
+    height: 100%;
 }
 
 .info {
@@ -219,12 +222,12 @@ header Link {
 //      About       \\
 .about {
     position: relative;
-    background: url('https://besthqwallpapers.com/Uploads/8-4-2019/86567/thumb2-liteshow-close-up-fortnite-battle-royale-ninja-2019-games.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) ), url('./images/dna.jpg');
     background-size: cover;
-    background-position: center 40px;
+    background-position: center center;
     background-attachment: fixed;
     overflow: scroll;
-    padding-top: 100%;
+    height: 100%;
 }    
 
 
@@ -373,7 +376,6 @@ header Link {
     border: $border-width $border-style $neon-cyan;
     background: $cyan-glow;
     border-radius: $radius;
-    min-height: 300px;
     max-width: 80vw;
     display: flex;
     flex-direction: column;
@@ -429,8 +431,7 @@ label {
 //      Footer      \\
 footer {
     color: white;
-    background: black;
-    padding-bottom: 1em;
+    background: $blue-glow;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -439,6 +440,12 @@ footer {
     justify-content: center;
     align-items: flex-end;
     border-top: 2px $border-style $neon-blue;
+
+    div {
+        @include changing-font;
+        font-family: 'neon';
+        font-weight: 700;
+    }
 }
 
 
