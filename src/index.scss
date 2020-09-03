@@ -129,6 +129,14 @@ html {
     height: 100%;
 }
 
+p {
+    margin-bottom: 2em;
+}
+
+.big {
+    font-size: 1.6em;
+}
+
 
 //      Header      \\
 header nav {
@@ -187,6 +195,13 @@ header Link {
     position: relative;
     padding-top: 100%;
     height: 100%;
+
+    .info {
+        position: absolute;
+        top: 4em;
+        left: 0;
+        right: 0;
+    }
 }
 
 .info {
@@ -198,11 +213,6 @@ header Link {
     margin: 0 auto;
     font-size: 1.2em;
     color: white;
-
-    position: absolute;
-    top: 4em;
-    left: 0;
-    right: 0;
 }
 
 .info big {
@@ -214,7 +224,7 @@ header Link {
         animation: fadein ease 2s;
         opacity: 0;
         animation-fill-mode: forwards;
-        animation-delay: ($i *2 - 1) * 1s;
+        animation-delay: ($i) * 1s;
     }
 }
 
@@ -228,6 +238,10 @@ header Link {
     background-attachment: fixed;
     overflow: scroll;
     height: 100%;
+
+    .info {
+        font-size: 1em;
+    }
 }    
 
 
