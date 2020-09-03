@@ -7,14 +7,11 @@ const About = () => {
             <section className='info'>
                 <div>
                     <p>
-                        <big>Hello,</big>
-                    </p>
-                    <p>
-                        I'm Nima, a software developer from Toronto.
+                        <big>Background..</big>
                     </p>
                     <p>
                         I received my Bachelor of Science in Chemistry in 2017. Why chemistry? I'm a very curious person, I like to know how things work - chemistry is the base and building block of everything.
-                        How are you seeing this right now? In very short; Many photons (light particles) being emitted at certain wavelengths (giving their color), determined by your computer through the flow of electromagnetic fields to various materials composing the circuitry (translating to digital information).
+                        <br></br>How are you seeing this right now? In very short; Many photons (light particles) being emitted at certain wavelengths (giving their color), determined by your computer through the flow of electromagnetic fields to various materials composing the circuitry (translating to digital information).
                         How do your eyes receive these images? How does your brain translate optical information to meaning? How do you remember these things? Why are you motivated to do any of this? How does your body work? Why is the sky blue?
                         As an ambitious teenager, I believed I could use this knowledge professionally to help improve the world somehow: develope life-saving medicine, bio-hack the genome to induce regeneration, discover a favourable process to break down plastics.   
                         ..You get the point, I could go on forever - and I love to actually, feel free to <a href='/contact'>contact me</a> to chat all things science.

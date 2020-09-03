@@ -27,7 +27,7 @@ ReactDOM.render(
         </div>
         <footer>
           <div>
-              <p>Designed by yours truly</p>
+              Designed by yours truly
           </div>
         </footer>
       </Router>
