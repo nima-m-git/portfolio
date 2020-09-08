@@ -203,6 +203,10 @@ header Link {
         left: 0;
         right: 0;
     }
+
+    .social {
+        display: flex;
+    }
 }
 
 .info {
@@ -228,7 +232,7 @@ header Link {
     font-size: 2em;
 }
 
-@for $i from 1 through 4 {
+@for $i from 1 through 5 {
     .load-#{$i} {
         animation: fadein ease 2s;
         opacity: 0;

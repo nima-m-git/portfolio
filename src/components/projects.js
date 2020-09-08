@@ -71,11 +71,11 @@ const Technologies = (props) => {
                     <h3>Programming</h3>
                     <ul>
                         <li>
-                            <img src={PythonIcon} alt=' icon'className='icon'/>
+                            <img src={PythonIcon} alt='Python icon'className='icon'/>
                             <span onClick={() => props.filterTech('Python')}>Python</span>                            
                         </li>
                         <li>
-                            <img src={JavascriptIcon} alt=' icon'className='icon'/>
+                            <img src={JavascriptIcon} alt='Javascript icon'className='icon'/>
                             <span onClick={() => props.filterTech('Javascript')}>Javascript</span>                            
                         </li>
                     </ul>
@@ -84,15 +84,15 @@ const Technologies = (props) => {
                     <h3>Frameworks</h3>
                     <ul>
                         <li>
-                            <img src={ReactIcon} alt=' icon'className='icon'/>
+                            <img src={ReactIcon} alt='React icon'className='icon'/>
                             <span onClick={() => props.filterTech('React')}>React</span>                            
                         </li>
                         <li>
-                            <img src={NodeJSIcon} alt=' icon'className='icon'/>
+                            <img src={NodeJSIcon} alt='Node icon'className='icon'/>
                             <span onClick={() => props.filterTech('Node')}>Node</span>                            
                         </li>
                         <li>
-                            <img src={DjangoIcon} alt=' icon'className='icon'/>
+                            <img src={DjangoIcon} alt='Django icon'className='icon'/>
                             <span onClick={() => props.filterTech('Django')}>Django</span>                            
                         </li>
                     </ul>
@@ -101,15 +101,15 @@ const Technologies = (props) => {
                     <h3>Design</h3>
                     <ul>
                         <li onClick={() => props.filterTech('HTML')}>
-                            <img src={HTML5Icon} alt=' icon'className='icon'/>
+                            <img src={HTML5Icon} alt='HTML icon'className='icon'/>
                             <span>HTML5</span>                            
                         </li>
                         <li onClick={() => props.filterTech('CSS')}>
-                            <img src={CSS3Icon} alt=' icon'className='icon'/>
+                            <img src={CSS3Icon} alt='CSS icon'className='icon'/>
                             <span>CSS3</span>                            
                         </li>
                         <li onClick={() => props.filterTech('Sass')}>
-                            <img src={SassIcon} alt=' icon'className='icon'/>
+                            <img src={SassIcon} alt='Sass icon'className='icon'/>
                             <span>Sass</span>                            
                         </li>
                     </ul>
@@ -118,15 +118,15 @@ const Technologies = (props) => {
                     <h3>Databases</h3>
                     <ul>
                         <li onClick={() => props.filterTech('PostgreSQL')}>
-                            <img src={PostgreSQLIcon} alt=' icon'className='icon'/>
+                            <img src={PostgreSQLIcon} alt='PostgreSQL icon'className='icon'/>
                             <span>PostgreSQL</span>                            
                         </li>
                         <li onClick={() => props.filterTech('MySQL')}>
-                            <img src={MySQLIcon} alt=' icon'className='icon'/>
+                            <img src={MySQLIcon} alt='MySQL icon'className='icon'/>
                             <span>MySQL</span>                            
                         </li>
                         <li onClick={() => props.filterTech('FireStore')}>
-                            <img src={FireStoreIcon} alt=' icon'className='icon'/>
+                            <img src={FireStoreIcon} alt='FireStore icon'className='icon'/>
                             <span>FireStore</span>                            
                         </li>
                     </ul>
@@ -139,11 +139,11 @@ const Technologies = (props) => {
                             <span>Webpack</span>                            
                         </li>
                         <li>
-                            <img src={FireBaseIcon} alt=' icon'className='icon'/>
+                            <img src={FireBaseIcon} alt='Firebase icon'className='icon'/>
                             <span>Firebase</span>                            
                         </li>
                         <li>
-                            <img src={GitIcon} alt=' icon'className='icon'/>
+                            <img src={GitIcon} alt='Git icon'className='icon'/>
                             <span>Git</span>                            
                         </li>
                     </ul>
