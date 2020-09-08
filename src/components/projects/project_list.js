@@ -1,7 +1,7 @@
 const applications = [
     {
         name: 'Spot Analysis',
-        background: './media/project-backgrounds/parking-spot.jpg',
+        background: '/media/project-backgrounds/parking-spot.jpg',
         techs: ['Python', 'Django', 'PostgreSQL'],
         codeURL: '',
         viewURL: '',
