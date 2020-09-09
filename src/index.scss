@@ -151,6 +151,8 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    flex-direction: column;
 }
 
 .nav-links {
@@ -184,6 +186,8 @@ header Link {
 
 .logo {
     @include changing-font;
+
+    font-size: 1.8em;
 }
 
 
@@ -481,6 +485,11 @@ footer {
     .logo {
         display: block;
         padding-left: 0.5em;
+        font-size: 3em;
+    }
+
+    header nav {
+        flex-direction: row;
     }
 
     .nav-links {
