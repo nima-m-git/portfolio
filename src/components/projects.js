@@ -183,6 +183,11 @@ class Projects extends React.Component {
         return (
             <div className='portfolio container'>
                 <h1>Portfolio</h1>
+                <p>
+                    This section is under constant construction. There is no limit to what can be learnt, built, and improved. 
+                    You may see something new or changed if you check here again in the future.
+                    <small>See something that could be improved? I would love to <a href='/contact'>hear your suggestion</a>.</small>  
+                </p>
                 {this.state.filterOn && 
                     <div className='view-all' >
                         <button onClick={this.filterOff}>View All</button>
