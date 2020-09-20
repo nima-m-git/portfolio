@@ -27,7 +27,7 @@ ReactDOM.render(
         </div>
         <footer>
           <div>
-              Designed by yours truly
+              Designed by Nima Mirzaei © 2020
           </div>
         </footer>
       </Router>
