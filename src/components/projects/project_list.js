@@ -72,9 +72,9 @@ const applications = [
     {
         name: 'Calculator',
         background: './media/project-backgrounds/calculator.jpg',
-        techs: ['Javascript', 'CSS'],
-        codeURL: 'https://github.com/nima-m-git/calculator',
-        viewURL: 'https://nima-m-git.github.io/calculator/',
+        techs: ['React', 'Javascript', 'CSS'],
+        codeURL: 'https://github.com/nima-m-git/calculator-react',
+        viewURL: 'https://nima-m-git.github.io/calculator-react/',
     }
 ]
 
