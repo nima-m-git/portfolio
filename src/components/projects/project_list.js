@@ -4,7 +4,7 @@ const applications = [
         background: '/media/project-backgrounds/parking-spot.jpg',
         techs: ['Python', 'Django', 'PostgreSQL'],
         codeURL: 'https://github.com/nima-m-git/parking-spot-django',
-        viewURL: '',
+        viewURL: 'https://github.com/nima-m-git/parking-spot-django',
     },
     {
         name: 'Where\'s Waldo',
@@ -17,8 +17,8 @@ const applications = [
         name: 'To-Do',
         background: './media/project-backgrounds/to-do.webp',
         techs: ['React', 'Javascript', 'Firebase'],
-        codeURL: 'https://github.com/nima-m-git/to-do',
-        viewURL: 'https://to-do-23867.web.app/',
+        codeURL: 'https://github.com/nima-m-git/to-do-react',
+        viewURL: 'https://nima-m-git.github.io/to-do-react',
     },
     {
         name: 'Battleship',
@@ -32,14 +32,7 @@ const applications = [
         background: './media/project-backgrounds/weather-widget.png',
         techs: ['React', 'Javascript'],
         codeURL: 'https://github.com/nima-m-git/weather-app-react',
-        viewURL: 'https://github.com/nima-m-git/weather-app-react',
-    },
-    {
-        name: 'Giphy Api',
-        background: './media/project-backgrounds/giphy.jpg',
-        techs: '',
-        codeURL: '',
-        viewURL: '',
+        viewURL: 'https://nima-m-git.github.io/weather-app-react/',
     },
     {
         name: 'Library',
