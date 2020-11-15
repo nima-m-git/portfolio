@@ -77,6 +77,10 @@ p {
     font-size: 1.2em;
 }
 
+.social {
+    display: flex;
+}
+
 
 //      Body        \\
 .page {
@@ -239,10 +243,6 @@ header nav {
         left: 0;
         right: 0;
     }
-
-    .social {
-        display: flex;
-    }
 }
 
 .info {
@@ -268,7 +268,7 @@ header nav {
     font-size: 2em;
 }
 
-@for $i from 1 through 5 {
+@for $i from 1 through 10 {
     .load-#{$i} {
         animation: fadein ease 2s;
         opacity: 0;
@@ -281,7 +281,7 @@ header nav {
 //      About       \\
 .about {
     position: relative;
-    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) ), url('./images/dna.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5) ), url('./images/dna.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -298,6 +298,10 @@ header nav {
 .portfolio {
     display: flex;
     flex-direction: column;
+
+    .social {
+        flex-direction: row;
+    }
 }
 
 .tech-projects-container {

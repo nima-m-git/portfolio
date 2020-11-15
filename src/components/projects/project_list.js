@@ -72,7 +72,7 @@ const applications = [
 ]
 
 
-const clones = [
+const design_clones = [
     {
         name: 'Newsweek',
         background: 'https://hyperpix.net/wp-content/uploads/2020/07/newsweek-logo-font-free-download.jpg',
@@ -130,9 +130,9 @@ const misc = [
 ]
 
 
-const projects = [applications, clones, misc]
+const projects = [applications, design_clones, misc]
 // change: array name to string? revert to object and use key names?
 // reduce redundancy
-const groupNames = ['applications', 'clones', 'misc']
+const groupNames = ['applications', 'design clones', 'misc']
 
 export { projects, groupNames }

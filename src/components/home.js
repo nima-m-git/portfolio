@@ -12,16 +12,18 @@ const Home = () => {
                         <big>Hello,</big>
                     </p>
                     <p className='load-2'>
-                        I'm Nima, a software developer from Toronto.
-                    </p>
-                    <p className='load-3'>
-                        Need something built? Improved? Meaningful insights from data? Collaborate on a project? Invest in an idea that could change the world? 
-                        New friend? Chat about anything? 
+                        I'm Nima, <span className='load-3'>a software developer from Toronto.</span>
                     </p>
                     <p className='load-4'>
-                        <a href='/contact'> Send me a message</a>
+                        Want something built? <span className='load-5'>Improved? </span>
+                        <br></br><span className='load-6'>Collaborate on a project? </span>
+                        <br></br><span className='load-7'>Invest in an idea that could change the world?</span>
+                        <br></br> <span className='load-8'>Or just chat about anything.</span>
                     </p>
-                    <ul className='load-5 social'>
+                    <p className='load-9'>
+                        <a href='/contact'> Reach out</a>
+                    </p>
+                    <ul className='load-10 social'>
                         <li>
                             <a href='https://github.com/nima-m-git' target='_blank'>
                                 <img src={GithubIcon} alt='Github icon'className='icon'/>
