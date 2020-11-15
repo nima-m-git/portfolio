@@ -183,13 +183,13 @@ class Projects extends React.Component {
 
     render() {
         return (
-            <div className='project container'>
+            <div className='project'>
                 {this.state.filterOn && 
                     <div className='view-all' >
                         <button onClick={this.filterOff}>View All</button>
                     </div>
                 }
-                <div className='tech-projects-container'>
+                <div className='tech-projects'>
                     <Technologies 
                         filterTech={this.filterTech}/>
                     <ProjectTiles 
@@ -218,7 +218,7 @@ const Portfolio = () => {
                 </li>
             </ul>
             <h1>Portfolio</h1>
-            <p className='container'>
+            <p className='centered'>
                 This section is under constant construction - There is no limit to what can be learnt, built, and improved. 
                 <br></br>You may see something new or different next time you check here.
                 <br></br><small>See something you believe could be improved? Please <a href='/contact'>let me know</a>.</small>  

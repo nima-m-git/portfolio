@@ -24,12 +24,12 @@ ReactDOM.render(
             <Route path='/portfolio' exact component={() => <Portfolio />} />
             <Route path='/contact' exact component={() => <Contact />} />
           </Switch>
+          <footer>
+            <div>
+              2020 Nima Mirzaei
+            </div>
+          </footer>
         </div>
-        <footer>
-          <div>
-            2020 Nima Mirzaei
-          </div>
-        </footer>
       </Router>
     </React.StrictMode>,
     document.getElementById('root')

@@ -82,18 +82,12 @@ p {
 //      Body        \\
 .page {
     margin-top: $header-height-lg;
-    margin-bottom: $footer-height;
     background: black;
     color: white;
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    position: relative;
+    min-height: 100vh;
     width: 100%;
     overflow: auto;
-}
-
-.page > * {
-    margin-bottom: 2em;
 }
 
 .container {
@@ -141,6 +135,10 @@ span.big {
 
 .social {
     display: flex;
+}
+
+.centered {
+    margin: 0 auto;
 }
 
 
@@ -309,7 +307,7 @@ header nav {
     }
 }
 
-.tech-projects-container {
+.tech-projects {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -394,7 +392,7 @@ header nav {
         width: max-content;
         background: rgba(0, 0, 0, 0.4);
         padding: 0.4em;
-        border-radius: 10px;
+        border-radius: $radius;
         border: 1px outset $neon-green;
     }
 
@@ -502,9 +500,8 @@ label {
 
 //      Footer      \\
 footer {
-    color: white;
     background: $blue-glow;
-    position: fixed;
+    position: absolute;
     width: 100%;
     bottom: 0;
     height: $footer-height;
@@ -565,7 +562,7 @@ footer {
 }
 
 @media (min-width: 1024px) {
-    .tech-projects-container {
+    .tech-projects {
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
