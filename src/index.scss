@@ -9,10 +9,11 @@ $neon-yellow: #ccff15;
 $green-hover: #6fff00a9;
 $cyan-hover: #00fffbb7;
 $blue-glow: rgb(0, 0, 78);
+$purple-glow: rgba(128, 73, 255, 0.219);
 $cyan-glow: #004b49;
 
-$radius: 15px;
-$border-width: 3px;
+$radius: 8px;
+$border-width: 2px;
 $border-style: groove;
 $header-height-sm: 4em;
 $header-height-lg: 5em;
@@ -77,10 +78,6 @@ p {
     font-size: 1.2em;
 }
 
-.social {
-    display: flex;
-}
-
 
 //      Body        \\
 .page {
@@ -140,6 +137,10 @@ p {
 
 span.big {
     font-size: 1.6em;
+}
+
+.social {
+    display: flex;
 }
 
 
@@ -301,6 +302,10 @@ header nav {
 
     .social {
         flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        left: 0;
+        right: 0;
     }
 }
 
@@ -310,10 +315,13 @@ header nav {
     justify-content: space-between;
 }
 
-.technologies {
+.techs-container, .projects {
     border: $border-width $border-style $neon-purple;
     border-radius: $radius;
+    background: $purple-glow;
+}
 
+.technologies {
     margin-bottom: 5em;
 
     h3 {
@@ -354,15 +362,12 @@ header nav {
 
 .projectTiles {
     text-align: center;
-    border: $border-width $border-style $neon-purple;
-    border-radius: $radius;
 }
 
 .projectGroup {
-    border: 2px solid $neon-blue;
     border-radius: $radius;
     margin-bottom: 2em;
-    background: $blue-glow;
+
 }
 
 .projectGroup ul {
@@ -373,7 +378,7 @@ header nav {
 
 .projectTile {
     margin-bottom: 1em;
-    border: 3px $border-style $neon-blue;
+    border: 1px $border-style $neon-blue;
     height: 200px;
     flex-basis: 80%;
     display: flex;
@@ -382,7 +387,7 @@ header nav {
     font-size: 1.2em;
     font-weight: 500;
     color: $neon-green;
-    border-radius: 8px;
+    border-radius: $radius;
 
     a, h4 {
         font-weight: 500;
@@ -549,6 +554,13 @@ footer {
 
     .projectTile {
         margin: 0.5em 0.5em;
+    }
+
+    .portfolio {
+        .social {
+            justify-content: flex-start;
+            padding-left: 20px;
+        }
     }
 }
 
