@@ -14,7 +14,8 @@ $cyan-glow: #004b49;
 $radius: 15px;
 $border-width: 3px;
 $border-style: groove;
-$header-height: 80px;
+$header-height-sm: 4em;
+$header-height-lg: 5em;
 $footer-height: 40px;
 
 
@@ -79,7 +80,7 @@ p {
 
 //      Body        \\
 .page {
-    margin-top: $header-height;
+    margin-top: $header-height-lg;
     margin-bottom: $footer-height;
     background: black;
     color: white;
@@ -87,7 +88,7 @@ p {
     top: 0;
     bottom: 0;
     width: 100%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .page > * {
@@ -141,52 +142,84 @@ span.big {
 //      Header      \\
 header nav {
     background: $blue-glow;
-    border: 5px double $neon-blue;
+    box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px 0 ;
+    background: linear-gradient(
+        to bottom,
+        rgb(98, 98, 226) 0%,
+        rgb(52, 52, 214) 10%,
+        rgb(18, 18, 97) 50%,
+        rgb(22, 22, 90) 55%,
+        rgb(27, 27, 95) 85%,
+        rgb(56, 56, 139) 98%,
+        rgb(21, 21, 83) 100%
+    );
+
     position: fixed;
     z-index: 1;
     top: 0;
     width: 100%;
-    height: $header-height;
+    height: $header-height-lg;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     flex-direction: column;
 }
 
 .nav-links {
     display: flex;
     width: 100%;
+    height: 100%;
     justify-content: space-evenly;
+    justify-self: flex-end;
 }
 
 .nav-item {
-    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-size: 1.4em;
     font-weight: 800;
     font-family: 'neon';
     color: $neon-green;
-    padding: 5px;
+    padding: 5px 25px;
     text-decoration: none;
+    
+    border-left: 1px solid;
+    border-image-source: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 10%,
+        rgb(50, 214, 0) 50%,
+        rgba(0, 0, 0, 0) 90%,
+    );
+    border-image-slice: 1;
 }
 
-.nav-item:hover {
-    color: $green-hover;
+
+.nav-item:hover, .logo-item:hover {
     text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.27);
+}
+
+.nav-item:active, .logo-item:active {
+    background: #001eff3d;
 }
 
 .nav-item:active {
-    border: 2px dotted $neon-green;
-    border-radius: 15px;
+    color: $green-hover;
 }
 
-header Link {
-    margin: 0.8em;
+.logo-item {
+    height: 100%;
+    display: flex;
+    padding: 0 15px;
 }
 
 .logo {
     @include changing-font;
 
     font-size: 1.8em;
+    padding: 0;
 }
 
 
@@ -480,19 +513,28 @@ footer {
 
 
 //         Media Queries        \\
-@media (min-width: 480px) {
+@media (min-width: 540px) {
     .logo {
         display: block;
-        padding-left: 0.5em;
         font-size: 3em;
-    }
-
-    header nav {
-        flex-direction: row;
     }
 
     .nav-links {
         justify-content: flex-end;
+    }
+
+    .page {
+        margin-top: $header-height-sm;
+    }
+
+    header nav {
+        height: $header-height-sm;
+        flex-direction: row;
+    }
+
+    .nav-item {
+        flex: 0;
+        font-size: 1.6em;
     }
 }
 

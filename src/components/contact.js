@@ -53,7 +53,6 @@ class ContactForm extends React.Component {
               alert('Thanks for the message. I’ll be in touch shortly.');
             } else {
               alert('Something went wrong');
-            //   console.error(JSON.parse(response.target.response).message);
             }
           };
 
@@ -71,7 +70,6 @@ class ContactForm extends React.Component {
                 <form 
                     onSubmit={this.handleSubmit}
                     method='POST'
-                    noValidate
                 >
                     <label>
                         Name:
