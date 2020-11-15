@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { projects, groupNames } from './projects/project_list.js';
 import LinkedinIcon from '../icons/icons8-linkedin.svg';
@@ -20,19 +20,34 @@ import SassIcon from '../icons/icons8-sass.svg';
 import MySQLIcon from '../icons/mysql-icon.svg';
 
 
-const createProjectTile = ({background, name, techs, codeURL, viewURL}) => {
+function CreateProjectTile ({background, name, techs, codeURL, viewURL}) {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <li 
             style={{ backgroundImage: `
-                linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3))
+                linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4))
                 ,url(${background})` }} 
-            key={name} className='projectTile'>
+            key={name} className='projectTile'
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             <h4>{name}</h4>
-            <ul className='techs'>{ console.log(Array.isArray(techs)) }</ul>
-            <div className='viewURLs'>
-                <a href={codeURL} target='_blank'>View Code</a>
-                <a href={viewURL} target='_blank'>View Project</a>
-            </div>
+            {(isHovered 
+                && 
+                <div className='viewURLs'>
+                    <a href={codeURL} target='_blank'>View Code</a>
+                    <a href={viewURL} target='_blank'>View Project</a>
+                </div>)
+                ||
+                (<ul className='techs'>
+                    {techs.map((tech) => {
+                        return (
+                            <li>{tech}</li>
+                        )
+                    })}
+                </ul>)
+            }
         </li>
     )
 }
@@ -53,7 +68,7 @@ const ProjectTiles = (props) => {
                         <div className='projectGroup'>
                             <h3 style={{'text-transform': 'capitalize'}}>{ groupNames[i] }</h3>
                             <ul>
-                                { group.map(project => createProjectTile(project)) }
+                                { group.map(project => CreateProjectTile(project)) }
                             </ul>
                         </div>
                 })}

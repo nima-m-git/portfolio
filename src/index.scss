@@ -78,7 +78,6 @@ p {
     font-size: 1.2em;
 }
 
-
 //      Body        \\
 .page {
     margin-top: $header-height-lg;
@@ -360,6 +359,8 @@ header nav {
 
 .projectTiles {
     text-align: center;
+    width: 100%;
+    flex: 1;
 }
 
 .projectGroup {
@@ -375,19 +376,27 @@ header nav {
 }
 
 .projectTile {
+    display: flex;
+    flex-basis: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+
     margin-bottom: 1em;
     border: 1px $border-style $neon-blue;
     height: 200px;
-    flex-basis: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     font-size: 1.2em;
     font-weight: 500;
     color: $neon-green;
     border-radius: $radius;
 
-    a, h4 {
+
+    .techs {
+        flex-direction: column;
+    }
+
+    a, h4, .techs {
         font-weight: 500;
         width: max-content;
         background: rgba(0, 0, 0, 0.4);
@@ -401,17 +410,27 @@ header nav {
         font-size: 1.2em;
         border-style: ridge;
         cursor: default;
+        position: absolute;
+        top: 10%;
+    }
+
+    .viewURLs {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 20%;
+    }
+
+    .techs {
+        position: absolute;
+        bottom: 5%;
     }
 
     a:hover {
         color: $green-hover;
     }
-}
-
-.viewURLs {
-    display: flex;
-    justify-content: space-around;
-    font-size: 0.8em;
 }
 
 .view-all {
@@ -547,9 +566,6 @@ footer {
 @media (min-width: 680px) {
     .projectTile {
         flex-basis: 45%;
-    }
-
-    .projectTile {
         margin: 0.5em 0.5em;
     }
 
