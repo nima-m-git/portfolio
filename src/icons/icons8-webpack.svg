@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64pt" height="64pt" viewBox="0 0 64 64" version="1.1">
 <g id="surface1151483">
-<rect x="0" y="0" width="64" height="64" style="fill:rgb(0%,0%,0%);fill-opacity:1;stroke:none;"/>
+<rect x="0" y="0" width="64" height="64" style="fill:rgb(0%,0%,0%);fill-opacity:0;stroke:none;"/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(67.45098%,89.019608%,100%);fill-opacity:1;" d="M 7 17 L 32 3 L 58 17 L 32 31 Z M 7 17 "/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(67.45098%,89.019608%,100%);fill-opacity:1;" d="M 6 17 L 6 47 L 32 62 L 32 31 Z M 6 17 "/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(48.235294%,74.509804%,92.156863%);fill-opacity:1;" d="M 17 23 L 32 15 L 47 23 L 32 31 Z M 17 23 "/>
