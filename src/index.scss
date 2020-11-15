@@ -552,10 +552,12 @@ footer {
     .tech-projects-container {
         flex-direction: row;
         align-items: flex-start;
+        justify-content: space-between;
     }
 
     .technologies {
         padding-bottom: 0;
+        margin-right: 25px;
     }
 
     .technologies ul {
