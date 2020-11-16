@@ -384,7 +384,7 @@ header nav {
     position: relative;
 
     margin-bottom: 1em;
-    border: 1px $border-style $neon-blue;
+    border: 0.5px $border-style $neon-blue;
     height: 200px;
     font-size: 1.2em;
     font-weight: 500;
@@ -399,16 +399,13 @@ header nav {
     a, h4, .techs {
         font-weight: 500;
         width: max-content;
-        background: rgba(0, 0, 0, 0.4);
         padding: 0.4em;
-        border-radius: $radius;
-        border: 1px outset $neon-green;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, .7);
     }
 
     h4 {
         margin: 0 auto;
         font-size: 1.2em;
-        border-style: ridge;
         cursor: default;
         position: absolute;
         top: 10%;
@@ -426,6 +423,7 @@ header nav {
     .techs {
         position: absolute;
         bottom: 5%;
+        text-align: start;
     }
 
     a:hover {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { projects, groupNames } from './projects/project_list.js';
 import LinkedinIcon from '../icons/icons8-linkedin.svg';
@@ -20,15 +21,20 @@ import SassIcon from '../icons/icons8-sass.svg';
 import MySQLIcon from '../icons/mysql-icon.svg';
 
 
-function CreateProjectTile ({background, name, techs, codeURL, viewURL}) {
+function CreateProjectTile ({ project: { background, name, techs, codeURL, viewURL } }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <li 
+        <motion.li
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+
+            className='projectTile' 
+            key={codeURL} 
             style={{ backgroundImage: `
-                linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4))
+                linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5))
                 ,url(${background})` }} 
-            key={name} className='projectTile'
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -43,21 +49,22 @@ function CreateProjectTile ({background, name, techs, codeURL, viewURL}) {
                 (<ul className='techs'>
                     {techs.map((tech) => {
                         return (
-                            <li>{tech}</li>
+                            <li key={tech}>{tech}</li>
                         )
                     })}
                 </ul>)
             }
-        </li>
+        </motion.li>
     )
 }
 
-const ProjectTiles = (props) => {
+
+function ProjectTiles (props) {
     const filteredProjects = (!props.filterOn) 
-        ? projects 
-        : projects.map(group => (
-            group.filter(project => project.techs.includes(props.tech))
-            ))
+            ? projects 
+            : projects.map(group => (
+                group.filter(project => project.techs.includes(props.tech))
+                ))
         
     return (
         <div className='projectTiles container'>
@@ -65,11 +72,14 @@ const ProjectTiles = (props) => {
             <div className='projects'>
                 {filteredProjects.map((group, i) => {
                     return group.length > 0 &&
-                        <div className='projectGroup'>
-                            <h3 style={{'text-transform': 'capitalize'}}>{ groupNames[i] }</h3>
+                        <div className='projectGroup' key={groupNames[i]}>
+                            <h3 style={{'textTransform': 'capitalize'}}>{ groupNames[i] }</h3>
                             <ul>
-                                { group.map(project => CreateProjectTile(project)) }
+                                <AnimatePresence>
+                                    { group.map(project => <CreateProjectTile project={project} key={project.viewURL}/>) }
+                                </AnimatePresence>
                             </ul>
+
                         </div>
                 })}
             </div>
