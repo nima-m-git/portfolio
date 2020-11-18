@@ -126,6 +126,13 @@ const misc = [
         techs: ['CSS', 'Sass'],
         codeURL: 'https://github.com/nima-m-git/grid-framework',
         viewURL: 'https://nima-m-git.github.io/framework-test-odin-mock/',
+    },
+    {
+        name: 'Portfolio',
+        background: 'https://cutewallpaper.org/21/80s-miami-wallpaper/80s-Retro-Wallpaper-Retro-Wave-Free-Wallpaper-.png',
+        techs: ['React', 'Javascript', 'Sass', 'AWS'],
+        codeURL: 'https://github.com/nima-m-git/portfolio',
+        viewURL: 'www.nima-m.me',
     }
 ]
 
