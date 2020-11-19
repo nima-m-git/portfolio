@@ -37,14 +37,12 @@ class ContactForm extends React.Component {
             message: this.state.message
         }
 
-        console.log(JSON.stringify(data))
-
         const req = new XMLHttpRequest();
         req.open('POST', url, true);
         req.setRequestHeader('Accept', 'application/json; charset=utf-8');
         req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     
-    
+        
         req.send(JSON.stringify(data));
     
         req.onloadend = response => {

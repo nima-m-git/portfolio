@@ -45,7 +45,7 @@ function CreateProjectTile ({ project: { background, name, techs, codeURL, viewU
 
 
 function ProjectTiles (props) {
-    const filteredProjects = (!props.filterOn) 
+    const filteredProjects = (!props.tech) 
             ? projects 
             : projects.map(group => (
                 group.filter(project => project.techs.includes(props.tech))
@@ -108,7 +108,6 @@ class Projects extends React.Component {
                         filterTech={this.filterTech}
                         />
                     <ProjectTiles 
-                        // filterOn={this.state.filterOn}
                         filterOff={this.filterOff}
                         tech={this.state.tech}
                         />

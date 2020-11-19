@@ -146,6 +146,7 @@ span.big {
 
 .centered {
     margin: 0 auto;
+    max-width: 80vw;
 }
 
 
@@ -341,7 +342,7 @@ header nav {
 .portfolio {
     display: flex;
     flex-direction: column;
-    background: $background-dim, url('https://media.istockphoto.com/vectors/retro-80s-background-vector-id902929330?b=1&k=6&m=902929330&s=612x612&w=0&h=Ua9rZ-K3siDj0NuvsjqQxuppdqZivOT4xbw-ZkMok1Q=');
+    background: $background-dim, url('https://i.pinimg.com/originals/96/03/56/96035695827908eb1e4774a802cdfec1.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
