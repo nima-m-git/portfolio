@@ -21,7 +21,6 @@ const Portfolio = () => {
                     </a>
                 </li>
             </ul>
-            <h1>Portfolio</h1>
             <p className='centered'>
                 This section is under constant construction - There is no limit to what can be learnt, built, and improved. 
                 <br></br>You may see something new or different next time you check here.

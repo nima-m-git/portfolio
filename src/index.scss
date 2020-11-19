@@ -20,21 +20,6 @@ $header-height-lg: 5em;
 $footer-height: 40px;
 $background-dim: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5) );
 
-// ==============================================
-// Variables
-// ==============================================
-
-$dot-width: 10px !default;
-$dot-height: 10px !default;
-$dot-radius: $dot-width/2 !default;
-
-$dot-color: #9880ff !default;
-$dot-bg-color: $dot-color !default;
-$dot-before-color: $dot-color !default;
-$dot-after-color: $dot-color !default;
-
-$dot-spacing: $dot-width + $dot-width/2 !default;
-
 
 //      Mixin       \\
 @mixin aspect-ratio($width, $height) {
@@ -43,19 +28,6 @@ $dot-spacing: $dot-width + $dot-width/2 !default;
     padding-top: ($width / $height) * 100%;
 }
 
-@mixin dot(
-    $width: $dot-width,
-    $height: $dot-height,
-    $radius: $dot-radius,
-    $bg-color: $dot-bg-color,
-    $color: $dot-color
-)   {
-    width: $width;
-    height: $height;
-    border-radius: $radius;
-    background-color: $bg-color;
-    color: $color;
-}
 
 // separate into own module 
 @mixin changing-font {
@@ -114,16 +86,15 @@ p {
     background: black;
     color: white;
     position: relative;
-    height: 100vh;
+    // min-height: 100vh;
     width: 100%;
-    overflow: auto;
+    // overflow: auto;
 }
 
 .container {
-    padding: 40px 20px 80px;
-    max-width: 95vw;
+    padding: 10vh 5vw;
     margin: 0 auto;
-    height: 100%;
+    // height: 80vh;
 }
 
 h1 {
@@ -227,6 +198,8 @@ header nav {
         rgba(0, 0, 0, 0) 90%,
     );
     border-image-slice: 1;
+
+    transition: 0.3s background-color;
 }
 
 
@@ -235,12 +208,8 @@ header nav {
     background-color: rgba(0, 0, 0, 0.27);
 }
 
-.nav-item:active, .logo-item:active {
-    background: #001eff3d;
-}
-
-.nav-item:active {
-    color: $green-hover;
+.active {
+    color: $neon-pink;
 }
 
 .logo-item {
@@ -265,30 +234,29 @@ header nav {
 
 .home {
     background: $background-dim ,url('https://img5.goodfon.com/wallpaper/nbig/0/8f/synth-retrowave-synthwave-new-retro-wave-sintveiv-retrove-25.jpg');
-    // //url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
+    // background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
     background-size: cover;
     background-position: center 40px;
     background-attachment: fixed;
     position: relative;
     // padding-top: 100%;
-    height: 100%;
-
+    min-height: 100vh;
+    margin: 0 auto;
     display: flex;
-    padding: 10vh auto 0;
+    
 
     .avatar {
-        width: 300px;
-        margin-right: 2rem;
-        font-size: 120px;
+        flex: 0;
+        font-size: 100px;
         text-align: center;
     }
 
     .messages {
-        max-width: 70vw;
-        margin: 0 auto;
-        width: 100%;
+        flex: 1;
+        max-width: 300px;
         font-size: 1.2em;
         color: white;
+        margin: 0 auto;
 
         .message {
             @extend %chatBubble;
@@ -313,6 +281,12 @@ header nav {
         a:hover {
             color: rgba(255, 255, 255, 0.568);
         }
+    }
+
+    .icon {
+        margin-right: 0.5em;
+        height: 5em;
+        width: 5em;
     }
 }
 
@@ -357,6 +331,10 @@ header nav {
         position: absolute;
         left: 0;
         right: 0;
+    }
+
+    .project {
+        margin-top: 5vh;
     }
 }
 
@@ -682,77 +660,3 @@ footer {
 }
 
 
-/**
- * ==============================================
- * Dot Typing
- * ==============================================
- */
-
- $left-pos: -9999px;
- $x1: -$left-pos - $dot-spacing;
- $x2: -$left-pos;
- $x3: -$left-pos + $dot-spacing;
- 
- .dot-typing {
-   position: relative;
-   left: $left-pos;
- 
-   @include dot;
- 
-   box-shadow:
-     $x1 0 0 0 $dot-before-color,
-     $x2 0 0 0 $dot-color,
-     $x3 0 0 0 $dot-after-color;
-   animation: dot-typing 1.5s infinite linear;
- }
- 
- @keyframes dot-typing {
-   0% {
-     box-shadow:
-       $x1 0 0 0 $dot-before-color,
-       $x2 0 0 0 $dot-color,
-       $x3 0 0 0 $dot-after-color;
-   }
- 
-   16.667% {
-     box-shadow:
-       $x1 -10px 0 0 $dot-before-color,
-       $x2 0 0 0 $dot-color,
-       $x3 0 0 0 $dot-after-color;
-   }
- 
-   33.333% {
-     box-shadow:
-       $x1 0 0 0 $dot-before-color,
-       $x2 0 0 0 $dot-color,
-       $x3 0 0 0 $dot-after-color;
-   }
- 
-   50% {
-     box-shadow:
-       $x1 0 0 0 $dot-before-color,
-       $x2 -10px 0 0 $dot-color,
-       $x3 0 0 0 $dot-after-color;
-   }
- 
-   66.667% {
-     box-shadow:
-       $x1 0 0 0 $dot-before-color,
-       $x2 0 0 0 $dot-color,
-       $x3 0 0 0 $dot-after-color;
-   }
- 
-   83.333% {
-     box-shadow:
-       $x1 0 0 0 $dot-before-color,
-       $x2 0 0 0 $dot-color,
-       $x3 -10px 0 0 $dot-after-color;
-   }
- 
-   100% {
-     box-shadow:
-       $x1 0 0 0 $dot-before-color,
-       $x2 0 0 0 $dot-color,
-       $x3 0 0 0 $dot-after-color;
-   }
- }

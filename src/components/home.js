@@ -5,24 +5,40 @@ import { DotPulse } from './ThreeDots/ThreeDots';
 
 import LinkedinIcon from '../icons/icons8-linkedin.svg';
 import GithubIcon from '../icons/icons8-github.svg';
+import ContactIcon from '../icons/icons8-messages.svg'
 
 
 const animationProps = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
+    initial: { 
+        opacity: 0,
+        translateY: 40, 
+    },
+    animate: { 
+        opacity: 1,
+        translateY: 0, 
+    },
 };
 
 const animationTyping = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0}
+    initial: { 
+        opacity: 0,
+        translateY: 20, 
+    },
+    animate: { 
+        opacity: 1,
+        translateY: 0, 
+    },
+    exit: { 
+        opacity: 0,
+        translateY: -20,
+    }
 }
 
 const messages = [
-    [`Hello World!`, 500],
-    [`I'm Nima, a software developer from Toronto`, 800],
-    [`Want something built? Improved? Collaborate on a project? Invest in an idea that could change the world?`, 1200],
-    [`Or just chat about anything?`, 1600],
+    [`Hello World!`, 1000],
+    [`I'm Nima, a software developer from Toronto`, 1300],
+    [`Want something built? Improved? Collaborate on a project? Invest in an idea that could change the world?`, 2300],
+    [`Or just chat about anything?`, 2600],
 ];
 
 const icons = [
@@ -30,14 +46,20 @@ const icons = [
         href: 'https://github.com/nima-m-git',
         src: GithubIcon,
         alt: 'Github icon',
-        delay: 1000,
+        delay: 0.7,
     },
     {
         href: 'https://www.linkedin.com/in/nima-mirzaei/',
         src: LinkedinIcon,
         alt: 'Linkedin icon',
-        delay: 1500,
+        delay: 1,
     },
+    {
+        href: '/contact',
+        src: ContactIcon,
+        alt: 'Contact icon',
+        delay: 1.3,
+    }
 ]
 
 
@@ -62,7 +84,7 @@ const Home = () => {
     return (
         <div className='home container'>
             <div className='avatar'>
-                <span role="img" aria-label="Nima's avatar">😎</span>
+                <img src=''></img>
             </div>
             <div className='messages'>
                 <AnimatePresence initial={false}>
@@ -102,7 +124,7 @@ const Home = () => {
                                     variants={animationProps}
                                     initial='initial'
                                     animate='animate'
-                                    transition={delay}
+                                    transition={{ delay }}
                                 >
                                     <a href={href}>
                                         <img src={src} alt={alt} className='icon'></img>

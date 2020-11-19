@@ -1,9 +1,0 @@
-$dot-color: #fff;
-
-@import './variables';
-@import './mixins';
-@import './dot-pulse';
-
-.container {
-  @extend .dot-pulse;
-}

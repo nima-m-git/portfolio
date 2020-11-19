@@ -26,8 +26,8 @@ function CreateProjectTile ({ project: { background, name, techs, codeURL, viewU
             {(isHovered 
                 && 
                 <div className='viewURLs'>
-                    <a href={codeURL} target='_blank'>View Code</a>
-                    <a href={viewURL} target='_blank'>View Project</a>
+                    <a href={codeURL} target='_blank' rel="noopener noreferrer">View Code</a>
+                    <a href={viewURL} target='_blank' rel="noopener noreferrer">View Project</a>
                 </div>)
                 ||
                 (<ul className='techs'>
@@ -51,7 +51,7 @@ function ProjectTiles (props) {
                 ))
         
     return (
-        <div className='projectTiles container'>
+        <div className='projectTiles'>
             <h2>Projects</h2>
             <div className='projects'>
                 {filteredProjects.map((group, i) => {

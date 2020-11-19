@@ -18,7 +18,7 @@ import MySQLIcon from '../icons/mysql-icon.svg';
 
 const Technologies = (props) => {
     return (
-        <div className='technologies container'>
+        <div className='technologies'>
             <h2>Technologies</h2>
             <div className='techs-container'>
                 {/* Combine Techs into fxn -- DRY */}

@@ -4,7 +4,6 @@ import React from 'react';
 const About = () => {
     return (
         <div className='about container'>
-            <h1>About</h1>
             <section className='info'>
                 <div>
                     <p>

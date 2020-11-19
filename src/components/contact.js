@@ -66,7 +66,7 @@ class ContactForm extends React.Component {
 
     render() {
         return (
-            <div className='form container'>
+            <div className='form'>
                 <form 
                     onSubmit={this.handleSubmit}
                     method='POST'
@@ -107,7 +107,6 @@ class ContactForm extends React.Component {
 const Contact = () => {
     return (
         <div className='contact container'>
-            <h1>Contact Me</h1>
             <ContactForm />
         </div>
     )
