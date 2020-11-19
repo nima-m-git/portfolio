@@ -97,17 +97,12 @@ p {
     color: white;
     position: relative;
     height: 100%;
-    // top: 0;
-    // bottom: 0;
-    // right: 0;
-    // left: 0;
     overflow: scroll;
 }
 
 .container {
     padding: 10vh 5vw;
     margin: auto;
-    // overflow: scroll;
 }
 
 h1 {
@@ -160,13 +155,13 @@ header nav {
     box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px 0 ;
     background: linear-gradient(
         to bottom,
-        rgb(98, 98, 226) 0%,
-        rgb(52, 52, 214) 10%,
-        rgb(18, 18, 97) 50%,
-        rgb(22, 22, 90) 55%,
-        rgb(27, 27, 95) 85%,
-        rgb(56, 56, 139) 98%,
-        rgb(21, 21, 83) 100%
+        rgba(98, 98, 226, 1) 0%,
+        rgba(52, 52, 214, 1) 10%,
+        rgb(36, 36, 114) 50%,
+        rgba(22, 22, 90, 1) 55%,
+        rgba(27, 27, 95, 1) 85%,
+        rgba(56, 56, 139, 1) 98%,
+        rgba(21, 21, 83, 1) 100%
     );
 
     position: fixed;
@@ -333,7 +328,13 @@ header nav {
     .info {
         font-size: 1em;
     }
-}    
+}
+
+%background-settings {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
 
 
 //      Portfolio       \\
@@ -341,7 +342,9 @@ header nav {
     display: flex;
     flex-direction: column;
     background: $background-dim, url('https://media.istockphoto.com/vectors/retro-80s-background-vector-id902929330?b=1&k=6&m=902929330&s=612x612&w=0&h=Ua9rZ-K3siDj0NuvsjqQxuppdqZivOT4xbw-ZkMok1Q=');
-    background-size: contain;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 
     .project {
         margin-top: 5vh;
@@ -533,7 +536,8 @@ header nav {
     }
 
     .heading {
-        font-size: 1.5em;
+        font-size: 1.8em;
+        font-weight: 500;
         text-align: center;
         margin-bottom: 1em;
     }
@@ -619,7 +623,7 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .tech-projects {
         flex-direction: row;
         align-items: flex-start;

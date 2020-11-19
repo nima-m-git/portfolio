@@ -64,7 +64,7 @@ const icons = [
 
 
 const Home = () => {
-    let messageQueue = messages;
+    const [messageQueue, setMessageQueue] = useState(messages);
     const [displayMessages, setDisplayMessages] = useState([]);
 
     useEffect(() => {
@@ -72,14 +72,17 @@ const Home = () => {
             return 
         }
 
-        const [nextMessage, delay] = messageQueue.shift();
+        const queueCopy = [...messageQueue];
+        const [nextMessage, delay] = queueCopy.shift();
+
 
         const timer = setTimeout(() => {
             setDisplayMessages([...displayMessages, nextMessage]);
+            setMessageQueue([...queueCopy]);
         }, delay);
 
         return () => clearTimeout(timer)
-    })
+    }, [messageQueue, displayMessages])
 
     return (
         <div className='home container'>
