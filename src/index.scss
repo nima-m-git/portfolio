@@ -61,6 +61,16 @@ $background-dim: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5) );
     background-position: center center;
 }
 
+html, body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+    // min-height: 100vh;
+    position: relative;
+}
+
 ul {
     list-style: none;
 }
@@ -82,19 +92,22 @@ p {
 
 //      Body        \\
 .page {
-    margin-top: $header-height-lg;
+    padding-top: $header-height-lg;
     background: black;
     color: white;
     position: relative;
-    // min-height: 100vh;
-    width: 100%;
-    // overflow: auto;
+    height: 100%;
+    // top: 0;
+    // bottom: 0;
+    // right: 0;
+    // left: 0;
+    overflow: scroll;
 }
 
 .container {
     padding: 10vh 5vw;
-    margin: 0 auto;
-    // height: 80vh;
+    margin: auto;
+    // overflow: scroll;
 }
 
 h1 {
@@ -127,9 +140,6 @@ html {
     height: 100%;
 }
 
-p {
-    margin-bottom: 2em;
-}
 
 span.big {
     font-size: 1.6em;
@@ -178,7 +188,18 @@ header nav {
     justify-self: flex-end;
 }
 
+%nav-divider {
+    border-image-source: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 10%,
+        rgb(50, 214, 0) 50%,
+        rgba(0, 0, 0, 0) 90%,
+    );
+    border-image-slice: 1;
+}
+
 .nav-item {
+    @extend %nav-divider;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,18 +209,16 @@ header nav {
     font-family: 'neon';
     color: $neon-green;
     padding: 5px 25px;
+    margin: 0 5px;
     text-decoration: none;
     
     border-left: 1px solid;
-    border-image-source: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 10%,
-        rgb(50, 214, 0) 50%,
-        rgba(0, 0, 0, 0) 90%,
-    );
-    border-image-slice: 1;
-
     transition: 0.3s background-color;
+}
+
+.nav-item:last-child() {
+    @extend %nav-divider;
+    border-right: 1px solid;;
 }
 
 
@@ -240,7 +259,7 @@ header nav {
     background-attachment: fixed;
     position: relative;
     // padding-top: 100%;
-    min-height: 100vh;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     
@@ -309,8 +328,7 @@ header nav {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    overflow: scroll;
-    height: 100%;
+    // height: 100%;
 
     .info {
         font-size: 1em;
@@ -324,14 +342,6 @@ header nav {
     flex-direction: column;
     background: $background-dim, url('https://media.istockphoto.com/vectors/retro-80s-background-vector-id902929330?b=1&k=6&m=902929330&s=612x612&w=0&h=Ua9rZ-K3siDj0NuvsjqQxuppdqZivOT4xbw-ZkMok1Q=');
     background-size: contain;
-
-    .social {
-        flex-direction: row;
-        justify-content: space-between;
-        position: absolute;
-        left: 0;
-        right: 0;
-    }
 
     .project {
         margin-top: 5vh;
@@ -394,6 +404,7 @@ header nav {
     text-align: center;
     width: 100%;
     flex: 1;
+    position: relative;
 }
 
 .projectGroup {
@@ -465,9 +476,9 @@ header nav {
 }
 
 .view-all {
-    align-self: stretch;
-    width: 100%;
-    margin-bottom: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .view-all button {
@@ -490,6 +501,12 @@ header nav {
 
 
 //      Contact     \\
+.contact {
+    margin-bottom: 0;
+    background: $background-dim ,url('https://wallpaperplay.com/walls/full/0/2/7/126417.jpg');
+    background-size: cover;
+}
+
 .form {
     margin: auto;
     width: 30em;
@@ -514,19 +531,18 @@ header nav {
     button:hover {
         background: #168b4b;
     }
-}
 
-.contact {
-    margin-bottom: 0;
-    background: $background-dim ,url('https://wallpaperplay.com/walls/full/0/2/7/126417.jpg');
-    background-size: cover;
+    .heading {
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 1em;
+    }
 }
 
 .contact form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 25em;
 }
 
 input, textarea {
@@ -582,7 +598,7 @@ footer {
     }
 
     .page {
-        margin-top: $header-height-sm;
+        padding-top: $header-height-sm;
     }
 
     header nav {
@@ -600,13 +616,6 @@ footer {
     .projectTile {
         flex-basis: 45%;
         margin: 0.5em 0.5em;
-    }
-
-    .portfolio {
-        .social {
-            justify-content: flex-start;
-            padding-left: 20px;
-        }
     }
 }
 

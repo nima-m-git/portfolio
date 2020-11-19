@@ -37,8 +37,8 @@ const animationTyping = {
 const messages = [
     [`Hello World!`, 1000],
     [`I'm Nima, a software developer from Toronto`, 1300],
-    [`Want something built? Improved? Collaborate on a project? Invest in an idea that could change the world?`, 2300],
-    [`Or just chat about anything?`, 2600],
+    [`Want something built? Improved? Collaborate on a project? Invest in an idea that could change the world?`, 2000],
+    [`Or just chat about anything?`, 2300],
 ];
 
 const icons = [

@@ -67,6 +67,9 @@ class ContactForm extends React.Component {
     render() {
         return (
             <div className='form'>
+                <div className='heading'>
+                    Send a message
+                </div>
                 <form 
                     onSubmit={this.handleSubmit}
                     method='POST'

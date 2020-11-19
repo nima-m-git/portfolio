@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Technologies } from './technologies';
 import { projects, groupNames } from './projects/project_list.js';
 
+
 function CreateProjectTile ({ project: { background, name, techs, codeURL, viewURL } }) {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -53,6 +54,11 @@ function ProjectTiles (props) {
     return (
         <div className='projectTiles'>
             <h2>Projects</h2>
+            {props.tech && 
+                <div className='view-all' >
+                    <button onClick={props.filterOff}>View All</button>
+                </div>
+            }
             <div className='projects'>
                 {filteredProjects.map((group, i) => {
                     return group.length > 0 &&
@@ -76,7 +82,6 @@ class Projects extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            filterOn: false,
             tech: null,
         }
         this.filterTech = this.filterTech.bind(this);
@@ -85,14 +90,12 @@ class Projects extends React.Component {
 
     filterTech(tech) {
         this.setState({
-            filterOn: true,
             tech,
         }) 
     }
 
     filterOff() {
         this.setState({
-            filterOn: false,
             tech: null,
         })
     }
@@ -100,17 +103,15 @@ class Projects extends React.Component {
     render() {
         return (
             <div className='project'>
-                {this.state.filterOn && 
-                    <div className='view-all' >
-                        <button onClick={this.filterOff}>View All</button>
-                    </div>
-                }
                 <div className='tech-projects'>
                     <Technologies 
-                        filterTech={this.filterTech}/>
+                        filterTech={this.filterTech}
+                        />
                     <ProjectTiles 
-                        filterOn={this.state.filterOn}
-                        tech={this.state.tech}/>
+                        // filterOn={this.state.filterOn}
+                        filterOff={this.filterOff}
+                        tech={this.state.tech}
+                        />
                 </div>
     
             </div>

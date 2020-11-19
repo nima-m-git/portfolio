@@ -16,7 +16,7 @@ import { default as Contact } from './components/contact.js';
 ReactDOM.render(
     <React.StrictMode>
       <Router>
-        <Header />
+      <Header />
         <div className='page'>
           <Switch>
             <Route path='/' exact component={() => <Home />} />
@@ -24,12 +24,12 @@ ReactDOM.render(
             <Route path='/portfolio' exact component={() => <Portfolio />} />
             <Route path='/contact' exact component={() => <Contact />} />
           </Switch>
-          <footer>
-            <div>
-              2020 Nima Mirzaei
-            </div>
-          </footer>
         </div>
+        <footer>
+          <div>
+            2020 Nima Mirzaei
+          </div>
+        </footer>
       </Router>
     </React.StrictMode>,
     document.getElementById('root')
