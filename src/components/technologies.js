@@ -35,17 +35,27 @@ const Technologies = (props) => (
                     </li>
                 </ul>
             </div>
-            <div className='framework techs'>
-                <h3>Frameworks, Libraries, Runtimes</h3>
+            <div className='Runtime techs'>
+                <h3>Runtime Envs</h3>
+                <ul>
+                    <li>
+                        <img src={NodeJSIcon} alt='Node icon'className='icon'/>
+                        <span onClick={() => props.filterTech('Node')}>NodeJS</span>                            
+                    </li>
+                </ul>
+            </div>
+            <div className='library techs'>
+                <h3>Libraries</h3>
                 <ul>
                     <li>
                         <img src={ReactIcon} alt='React icon'className='icon'/>
                         <span onClick={() => props.filterTech('React')}>React</span>                            
                     </li>
-                    <li>
-                        <img src={NodeJSIcon} alt='Node icon'className='icon'/>
-                        <span onClick={() => props.filterTech('Node')}>Node.JS</span>                            
-                    </li>
+                </ul>
+            </div>
+            <div className='framework techs'>
+                <h3>Frameworks</h3>
+                <ul>
                     <li>
                         <img src={DjangoIcon} alt='Django icon'className='icon'/>
                         <span onClick={() => props.filterTech('Django')}>Django</span>                            
