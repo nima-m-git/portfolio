@@ -13,7 +13,8 @@ import PostgreSQLIcon from '../icons/icons8-postgresql.svg';
 import PythonIcon from '../icons/icons8-python.svg';
 import ReactIcon from '../icons/icons8-react.svg';
 import SassIcon from '../icons/icons8-sass.svg';
-import MySQLIcon from '../icons/mysql-icon.svg';
+import MongoDBIcon from '../icons/icons8-mongodb.svg';
+import ExpressJSIcon from '../icons/expressjs.svg';
 
 
 const Technologies = (props) => (
@@ -35,7 +36,7 @@ const Technologies = (props) => (
                 </ul>
             </div>
             <div className='framework techs'>
-                <h3>Frameworks</h3>
+                <h3>Frameworks, Libraries, Runtimes</h3>
                 <ul>
                     <li>
                         <img src={ReactIcon} alt='React icon'className='icon'/>
@@ -43,11 +44,15 @@ const Technologies = (props) => (
                     </li>
                     <li>
                         <img src={NodeJSIcon} alt='Node icon'className='icon'/>
-                        <span onClick={() => props.filterTech('Node')}>Node</span>                            
+                        <span onClick={() => props.filterTech('Node')}>Node.JS</span>                            
                     </li>
                     <li>
                         <img src={DjangoIcon} alt='Django icon'className='icon'/>
                         <span onClick={() => props.filterTech('Django')}>Django</span>                            
+                    </li>
+                    <li>
+                        <img src={ExpressJSIcon} alt='Express icon'className='icon'/>
+                        <span onClick={() => props.filterTech('Express')}>Express</span>                            
                     </li>
                 </ul>
             </div>
@@ -75,9 +80,9 @@ const Technologies = (props) => (
                         <img src={PostgreSQLIcon} alt='PostgreSQL icon'className='icon'/>
                         <span>PostgreSQL</span>                            
                     </li>
-                    <li onClick={() => props.filterTech('MySQL')}>
-                        <img src={MySQLIcon} alt='MySQL icon'className='icon'/>
-                        <span>MySQL</span>                            
+                    <li onClick={() => props.filterTech('MongoDB')}>
+                        <img src={MongoDBIcon} alt='MongoDB icon'className='icon'/>
+                        <span>MongoDB</span>                            
                     </li>
                     <li onClick={() => props.filterTech('FireStore')}>
                         <img src={FireStoreIcon} alt='FireStore icon'className='icon'/>

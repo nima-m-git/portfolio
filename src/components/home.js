@@ -87,7 +87,7 @@ const Home = () => {
     return (
         <div className='home container'>
             <div className='avatar'>
-                <img src=''></img>
+                {/* <img src=''></img> */}
             </div>
             <div className='messages'>
                 <AnimatePresence initial={false}>
