@@ -74,7 +74,7 @@ const applications = [
         background: './media/project-backgrounds/grocery.jpg',
         techs: ['Node', 'Express', 'MongoDB'],
         codeURL: 'https://github.com/nima-m-git/grocery-inventory',
-        viewURL: 'https://safe-forest-10126.herokuapp.com/inventory/item/5fbac8ba192f8b00177152b7',
+        viewURL: 'https://safe-forest-10126.herokuapp.com/inventory',
     }
 ]
 
