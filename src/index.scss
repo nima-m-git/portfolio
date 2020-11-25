@@ -47,6 +47,17 @@ $background-dim: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5) );
     src: url('./fonts/neon_glow/NEON GLOW.otf');
 }
 
+@font-face {
+    font-family: 'neon';
+    src: url('./fonts/neon_glow/NEON GLOW-Bold.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'lazer';
+    src: url('./fonts/lazer/lazer84-webfont.woff');
+}
+
 
 //    Format   \\
 * {
@@ -128,7 +139,6 @@ h3 {
     margin: 0.5em 0;
     font-size: 1.8em;
     font-family: 'neon';
-    font-weight: 1100;
 }
 
 html {
@@ -202,14 +212,14 @@ header nav {
     flex: 1;
     font-size: 1.4em;
     font-weight: 800;
-    font-family: 'neon';
+    font-family: 'lazer';
     color: $neon-green;
     padding: 5px 25px;
     margin: 0 5px;
     text-decoration: none;
     
     border-left: 1px solid;
-    transition: 0.3s background-color;
+    transition: color 0.7s, background-color 0.4s;
 }
 
 .nav-item:last-child() {
@@ -217,20 +227,11 @@ header nav {
     border-right: 1px solid;;
 }
 
-
-.nav-item:hover, .logo-item:hover {
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.27);
-}
-
-.active {
-    color: $neon-pink;
-}
-
 .logo-item {
     height: 100%;
     display: flex;
     padding: 0 15px;
+    transition: background-color 0.4s;
 }
 
 .logo {
@@ -238,6 +239,16 @@ header nav {
 
     font-size: 1.8em;
     padding: 0;
+}
+
+.nav-item:hover, .logo-item:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.27);
+    color: $neon-yellow;
+}
+
+.active {
+    color: $neon-pink;
 }
 
 
@@ -248,13 +259,12 @@ header nav {
 }
 
 .home {
-    background: $background-dim ,url('https://img5.goodfon.com/wallpaper/nbig/0/8f/synth-retrowave-synthwave-new-retro-wave-sintveiv-retrove-25.jpg');
-    // background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
+    // background: $background-dim ,url('https://img5.goodfon.com/wallpaper/nbig/0/8f/synth-retrowave-synthwave-new-retro-wave-sintveiv-retrove-25.jpg');
+    background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
     background-size: cover;
     background-position: center 40px;
     background-attachment: fixed;
     position: relative;
-    // padding-top: 100%;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -306,7 +316,7 @@ header nav {
 }
 
 
-// no longer in use
+// not being used
 @for $i from 1 through 10 {
     .load-#{$i} {
         animation: fadein ease 2s;
@@ -324,17 +334,10 @@ header nav {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    // height: 100%;
 
     .info {
         font-size: 1em;
     }
-}
-
-%background-settings {
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
 }
 
 
@@ -425,7 +428,8 @@ header nav {
 
 .projectTile {
     display: flex;
-    flex-basis: 80%;
+    flex-basis: 70%;
+    max-width: 300px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -433,7 +437,7 @@ header nav {
 
     margin-bottom: 1em;
     border: 0.5px $border-style $neon-blue;
-    height: 200px;
+    height: 160px;
     font-size: 1.2em;
     font-weight: 500;
     color: $neon-green;
@@ -609,11 +613,12 @@ footer {
     header nav {
         height: $header-height-sm;
         flex-direction: row;
+        padding: 0 0.5em;
     }
 
     .nav-item {
         flex: 0;
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
 }
 
