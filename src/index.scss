@@ -210,7 +210,7 @@ header nav {
     align-items: center;
     justify-content: center;
     flex: 1;
-    font-size: 1.4em;
+    font-size: 1em;
     font-weight: 800;
     font-family: 'lazer';
     color: $neon-green;
@@ -244,7 +244,7 @@ header nav {
 .nav-item:hover, .logo-item:hover {
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.27);
-    color: $neon-yellow;
+    color: $neon-cyan;
 }
 
 .active {
@@ -338,6 +338,10 @@ header nav {
     .info {
         font-size: 1em;
     }
+
+    p {
+        margin-bottom: 2em;
+    }
 }
 
 
@@ -365,6 +369,7 @@ header nav {
     border: $border-width $border-style $neon-purple;
     border-radius: $radius;
     background: $purple-glow;
+    box-shadow: 0 0 8px 1px $neon-purple;
     padding: 0 10px;
 }
 
@@ -519,6 +524,7 @@ header nav {
     margin: auto;
     width: 30em;
     border: $border-width $border-style $neon-cyan;
+    box-shadow: 0 0 8px 1px $neon-cyan;
     background: $cyan-glow;
     border-radius: $radius;
     max-width: 80vw;
@@ -534,6 +540,8 @@ header nav {
         border-radius: 5px;
         font-size: 1.2em;
         font-weight: 500;
+        transition: background-color 0.3s;
+        cursor: pointer;
     }
     
     button:hover {

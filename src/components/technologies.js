@@ -94,7 +94,7 @@ const Technologies = (props) => (
                         <img src={MongoDBIcon} alt='MongoDB icon'className='icon'/>
                         <span>MongoDB</span>                            
                     </li>
-                    <li onClick={() => props.filterTech('FireStore')}>
+                    <li onClick={() => props.filterTech('Firestore')}>
                         <img src={FireStoreIcon} alt='FireStore icon'className='icon'/>
                         <span>FireStore</span>                            
                     </li>
