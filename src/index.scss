@@ -18,672 +18,673 @@ $border-style: groove;
 $header-height-sm: 4em;
 $header-height-lg: 5em;
 $footer-height: 40px;
-$background-dim: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5) );
-
+$background-dim: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
 
 //      Mixin       \\
 @mixin aspect-ratio($width, $height) {
-    // overflow: hidden;
-    height: 100%;
-    padding-top: ($width / $height) * 100%;
+  // overflow: hidden;
+  height: 100%;
+  padding-top: ($width / $height) * 100%;
 }
 
-
-// separate into own module 
+// separate into own module
 @mixin changing-font {
-    margin: auto;
-    animation: fadeIn 1s, flow 6s linear infinite; 
-    background: linear-gradient(-60deg, $neon-purple 0%, $neon-blue 20%,  $neon-cyan 40%, $neon-green 60%, $neon-pink 80%, $neon-purple 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200%;
+  margin: auto;
+  animation: fadeIn 1s, flow 6s linear infinite;
+  background: linear-gradient(
+    -60deg,
+    $neon-purple 0%,
+    $neon-blue 20%,
+    $neon-cyan 40%,
+    $neon-green 60%,
+    $neon-pink 80%,
+    $neon-purple 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
 }
-
 
 //      Font        \\
 @font-face {
-    font-family: 'neon';
-    src: url('./fonts/neon_glow/NEON GLOW.otf');
+  font-family: "neon";
+  src: url("./fonts/neon_glow/NEON GLOW.otf");
 }
 
 @font-face {
-    font-family: 'neon';
-    src: url('./fonts/neon_glow/NEON GLOW-Bold.otf');
-    font-weight: bold;
+  font-family: "neon";
+  src: url("./fonts/neon_glow/NEON GLOW-Bold.otf");
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: 'lazer';
-    src: url('./fonts/lazer/lazer84-webfont.woff');
+  font-family: "lazer";
+  src: url("./fonts/lazer/lazer84-webfont.woff");
 }
-
 
 //    Format   \\
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-weight: 300;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 300;
 
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 #root {
-    height: 100%;
-    // min-height: 100vh;
-    position: relative;
+  height: 100%;
+  // min-height: 100vh;
+  position: relative;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 p {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    line-height: 1.4em;
-    font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.4em;
+  font-size: 1.2em;
 }
 
 //      Body        \\
 .page {
-    padding-top: $header-height-lg;
-    background: black;
-    color: white;
-    position: relative;
-    height: 100%;
-    overflow: scroll;
+  padding-top: $header-height-lg;
+  background: black;
+  color: white;
+  position: relative;
+  height: 100%;
+  overflow: scroll;
 }
 
 .container {
-    padding: 10vh 5vw;
-    margin: auto;
+  padding: 10vh 5vw;
+  margin: auto;
 }
 
 h1 {
-    text-align: center;
-    color: $neon-green;
-    font-weight: 500;
-    font-family: 'neon';
-    font-size: 3em;
-    margin-top: 0;
+  text-align: center;
+  color: $neon-green;
+  font-weight: 500;
+  font-family: "neon";
+  font-size: 3em;
+  margin-top: 0;
 }
 
 h2 {
-    text-decoration: underline;
-    color: $neon-purple;
-    text-align: center;
-    margin-bottom: 1em;
-    font-size: 2.2em;
-    font-family: 'neon';
+  text-decoration: underline;
+  color: $neon-purple;
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 2.2em;
+  font-family: "neon";
 }
 
 h3 {
-    color: $neon-cyan;
-    margin: 0.5em 0;
-    font-size: 1.8em;
-    font-family: 'neon';
+  color: $neon-cyan;
+  margin: 0.5em 0;
+  font-size: 1.8em;
+  font-family: "neon";
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
-
 span.big {
-    font-size: 1.6em;
+  font-size: 1.6em;
 }
 
 .social {
-    display: flex;
+  display: flex;
 }
 
 .centered {
-    margin: 0 auto;
-    max-width: 80vw;
+  margin: 0 auto;
+  max-width: 80vw;
 }
-
 
 //      Header      \\
 header nav {
-    background: $blue-glow;
-    box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px 0 ;
-    background: linear-gradient(
-        to bottom,
-        rgba(98, 98, 226, 1) 0%,
-        rgba(52, 52, 214, 1) 10%,
-        rgb(36, 36, 114) 50%,
-        rgba(22, 22, 90, 1) 55%,
-        rgba(27, 27, 95, 1) 85%,
-        rgba(56, 56, 139, 1) 98%,
-        rgba(21, 21, 83, 1) 100%
-    );
+  background: $blue-glow;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(98, 98, 226, 1) 0%,
+    rgba(52, 52, 214, 1) 10%,
+    rgb(36, 36, 114) 50%,
+    rgba(22, 22, 90, 1) 55%,
+    rgba(27, 27, 95, 1) 85%,
+    rgba(56, 56, 139, 1) 98%,
+    rgba(21, 21, 83, 1) 100%
+  );
 
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    width: 100%;
-    height: $header-height-lg;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: $header-height-lg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .nav-links {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-evenly;
-    justify-self: flex-end;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  justify-self: flex-end;
 }
 
 %nav-divider {
-    border-image-source: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 10%,
-        rgb(50, 214, 0) 50%,
-        rgba(0, 0, 0, 0) 90%,
-    );
-    border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 10%,
+    rgb(50, 214, 0) 50%,
+    rgba(0, 0, 0, 0) 90%
+  );
+  border-image-slice: 1;
 }
 
 .nav-item {
-    @extend %nav-divider;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    font-size: 1em;
-    font-weight: 800;
-    font-family: 'lazer';
-    color: $neon-green;
-    padding: 5px 25px;
-    margin: 0 5px;
-    text-decoration: none;
-    
-    border-left: 1px solid;
-    transition: color 0.7s, background-color 0.4s;
+  @extend %nav-divider;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: 1em;
+  font-weight: 800;
+  font-family: "lazer";
+  color: $neon-green;
+  padding: 5px 25px;
+  margin: 0 5px;
+  text-decoration: none;
+
+  border-left: 1px solid;
+  transition: color 0.7s, background-color 0.4s;
 }
 
 .nav-item:last-child() {
-    @extend %nav-divider;
-    border-right: 1px solid;;
+  @extend %nav-divider;
+  border-right: 1px solid;
 }
 
 .logo-item {
-    height: 100%;
-    display: flex;
-    padding: 0 15px;
-    transition: background-color 0.4s;
+  height: 100%;
+  display: flex;
+  padding: 0 15px;
+  transition: background-color 0.4s;
 }
 
 .logo {
-    @include changing-font;
+  @include changing-font;
 
-    font-size: 1.8em;
-    padding: 0;
+  font-size: 1.8em;
+  padding: 0;
 }
 
-.nav-item:hover, .logo-item:hover {
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.27);
-    color: $neon-cyan;
+.nav-item:hover,
+.logo-item:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.27);
+  color: $neon-cyan;
 }
 
 .active {
-    color: $neon-pink;
+  color: $neon-pink;
 }
-
 
 //      Home        \\
 %chatBubble {
-    background: transparentize($neon-pink, $amount: 0.4);
-    border-radius: 1.5rem 1.5rem 1.5rem 0;
+  background: transparentize($neon-pink, $amount: 0.4);
+  border-radius: 1.5rem 1.5rem 1.5rem 0;
 }
 
 .home {
-    // background: $background-dim ,url('https://img5.goodfon.com/wallpaper/nbig/0/8f/synth-retrowave-synthwave-new-retro-wave-sintveiv-retrove-25.jpg');
-    background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
-    background-size: cover;
-    background-position: center 40px;
-    background-attachment: fixed;
-    position: relative;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    
+  // background: $background-dim ,url('https://img5.goodfon.com/wallpaper/nbig/0/8f/synth-retrowave-synthwave-new-retro-wave-sintveiv-retrove-25.jpg');
+  background: url("https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif");
+  background-size: cover;
+  background-position: center 40px;
+  background-attachment: fixed;
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
 
-    .avatar {
-        flex: 0;
-        font-size: 100px;
-        text-align: center;
-    }
-
-    .messages {
-        flex: 1;
-        max-width: 300px;
-        font-size: 1.2em;
-        color: white;
-        margin: 0 auto;
-
-        .message {
-            @extend %chatBubble;
-            display: inline-block;
-            padding: 0.75rem 1rem;
-            margin: 0 0 0.5rem;
-            font-size: 1em;
-            font-weight: 500;
-        }
-
-        .typingIndicator {
-            @extend %chatBubble;
-          
-            padding: 1em 2em;
-            display: inline-block;
-        }
-
-        a {
-            text-decoration: underline;
-        }
-    
-        a:hover {
-            color: rgba(255, 255, 255, 0.568);
-        }
-    }
-
-    .icon {
-        margin-right: 0.5em;
-        height: 5em;
-        width: 5em;
-    }
-}
-
-
-// not being used
-@for $i from 1 through 10 {
-    .load-#{$i} {
-        animation: fadein ease 2s;
-        opacity: 0;
-        animation-fill-mode: forwards;
-        animation-delay: ($i) * 1s;
-    }
-}
-
-
-//      About       \\
-.about {
-    position: relative;
-    background: $background-dim, url('./images/dna.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-
-    .info {
-        font-size: 1em;
-    }
-
-    p {
-        margin-bottom: 2em;
-    }
-}
-
-
-//      Portfolio       \\
-.portfolio {
-    display: flex;
-    flex-direction: column;
-    background: $background-dim, url('https://i.pinimg.com/originals/96/03/56/96035695827908eb1e4774a802cdfec1.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-
-    .project {
-        margin-top: 5vh;
-    }
-}
-
-.tech-projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.techs-container, .projects {
-    border: $border-width $border-style $neon-purple;
-    border-radius: $radius;
-    background: $purple-glow;
-    box-shadow: 0 0 8px 1px $neon-purple;
-    padding: 0 10px;
-}
-
-.technologies {
-    margin-bottom: 5em;
-
-    h3 {
-        text-align: center;
-    }
-
-    .techs {
-        margin: 2em 0;
-    }
-    
-    .techs ul {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-    .techs li {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 0 1em;
-        line-height: 2em;
-        font-size: 1.2em;
-        cursor: pointer;
-        color: $neon-yellow;
-    }
-
-    .techs li:hover {
-        text-decoration: underline;
-    }
-
-    .icon {
-        margin-right: 1em;
-        height: 2.5em;
-        width: 2.5em;
-    }
-}
-
-.projectTiles {
+  .avatar {
+    flex: 0;
+    font-size: 100px;
     text-align: center;
-    width: 100%;
+  }
+
+  .messages {
     flex: 1;
-    position: relative;
-}
-
-.projectGroup {
-    border-radius: $radius;
-    margin-bottom: 2em;
-
-}
-
-.projectGroup ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.projectTile {
-    display: flex;
-    flex-basis: 70%;
     max-width: 300px;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-
-    margin-bottom: 1em;
-    border: 0.5px $border-style $neon-blue;
-    height: 160px;
     font-size: 1.2em;
-    font-weight: 500;
-    color: $neon-green;
-    border-radius: $radius;
+    color: white;
+    margin: 0 auto;
 
-
-    .techs {
-        flex-direction: column;
+    .message {
+      @extend %chatBubble;
+      display: inline-block;
+      padding: 0.75rem 1rem;
+      margin: 0 0 0.5rem;
+      font-size: 1em;
+      font-weight: 500;
     }
 
-    a, h4, .techs {
-        font-weight: 500;
-        width: max-content;
-        padding: 0.4em;
-        text-shadow: 3px 3px 3px rgba(0, 0, 0, .7);
+    .typingIndicator {
+      @extend %chatBubble;
+
+      padding: 1em 2em;
+      display: inline-block;
     }
 
-    h4 {
-        margin: 0 auto;
-        font-size: 1.2em;
-        cursor: default;
-        position: absolute;
-        top: 10%;
-    }
-
-    .viewURLs {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-        font-size: 0.8em;
-        position: absolute;
-        bottom: 20%;
-    }
-
-    .techs {
-        position: absolute;
-        bottom: 5%;
-        text-align: start;
+    a {
+      text-decoration: underline;
     }
 
     a:hover {
-        color: $green-hover;
+      color: rgba(255, 255, 255, 0.568);
     }
+  }
+
+  .icon {
+    margin-right: 0.5em;
+    height: 5em;
+    width: 5em;
+  }
+}
+
+// not being used
+@for $i from 1 through 10 {
+  .load-#{$i} {
+    animation: fadein ease 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: ($i) * 1s;
+  }
+}
+
+//      About       \\
+.about {
+  position: relative;
+  background: $background-dim, url("./images/dna.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  .info {
+    font-size: 1em;
+  }
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+//      Portfolio       \\
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  background: $background-dim,
+    url("https://i.pinimg.com/originals/96/03/56/96035695827908eb1e4774a802cdfec1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  .project {
+    margin-top: 5vh;
+  }
+}
+
+.tech-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.techs-container,
+.projects {
+  border: $border-width $border-style $neon-purple;
+  border-radius: $radius;
+  background: $purple-glow;
+  box-shadow: 0 0 8px 1px $neon-purple;
+  padding: 0 10px;
+}
+
+.technologies {
+  margin-bottom: 5em;
+
+  h3 {
+    text-align: center;
+  }
+
+  .techs {
+    margin: 2em 0;
+  }
+
+  .techs ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .techs li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 1em;
+    line-height: 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: $neon-yellow;
+  }
+
+  .techs li:hover {
+    text-decoration: underline;
+  }
+
+  .icon {
+    margin-right: 1em;
+    height: 2.5em;
+    width: 2.5em;
+  }
+}
+
+.projectTiles {
+  text-align: center;
+  width: 100%;
+  flex: 1;
+  position: relative;
+}
+
+.projectGroup {
+  border-radius: $radius;
+  margin-bottom: 2em;
+}
+
+.projectGroup ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projectTile {
+  display: flex;
+  flex-basis: 70%;
+  max-width: 300px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+
+  margin-bottom: 1em;
+  border: 0.5px $border-style $neon-blue;
+  height: 200px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: $neon-green;
+  border-radius: $radius;
+
+  .techs {
+    flex-direction: column;
+  }
+
+  a,
+  h4,
+  .techs {
+    font-weight: 500;
+    width: max-content;
+    padding: 0.4em;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+  }
+
+  h4 {
+    margin: 0 auto;
+    font-size: 1.2em;
+    cursor: default;
+    position: absolute;
+    top: 10%;
+  }
+
+  .viewURLs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 20%;
+  }
+
+  .techs {
+    position: absolute;
+    bottom: 5%;
+    text-align: start;
+  }
+
+  a:hover {
+    color: $green-hover;
+  }
 }
 
 .view-all {
-    position: absolute;
-    top: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .view-all button {
-    width: 100%;
-    padding: 0.5em;
-    font-size: 1.4em;
-    border-radius: 8px;
-    background: $blue-glow;
-    color: $neon-cyan;
-    font-weight: 800;
-    font-family: 'neon';
-    border: 1.5px solid $neon-blue;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.4em;
+  border-radius: 8px;
+  background: $blue-glow;
+  color: $neon-cyan;
+  font-weight: 800;
+  font-family: "neon";
+  border: 1.5px solid $neon-blue;
 }
 
 .view-all button:hover {
-    color: $cyan-hover;
-    background: rgba(0, 0, 255, 0.397);
-    cursor: pointer;
+  color: $cyan-hover;
+  background: rgba(0, 0, 255, 0.397);
+  cursor: pointer;
 }
-
 
 //      Contact     \\
 .contact {
-    margin-bottom: 0;
-    background: $background-dim ,url('https://wallpaperplay.com/walls/full/0/2/7/126417.jpg');
-    background-size: cover;
+  margin-bottom: 0;
+  background: $background-dim,
+    url("https://wallpaperplay.com/walls/full/0/2/7/126417.jpg");
+  background-size: cover;
 }
 
 .form {
-    margin: auto;
-    width: 30em;
-    border: $border-width $border-style $neon-cyan;
-    box-shadow: 0 0 8px 1px $neon-cyan;
-    background: $cyan-glow;
-    border-radius: $radius;
-    max-width: 80vw;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
+  margin: auto;
+  width: 30em;
+  border: $border-width $border-style $neon-cyan;
+  box-shadow: 0 0 8px 1px $neon-cyan;
+  background: $cyan-glow;
+  border-radius: $radius;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
 
-    button {
-        padding: 1em;
-        background: #1aa85a;
-        color: white;
-        border: 1px solid $neon-cyan;
-        border-radius: 5px;
-        font-size: 1.2em;
-        font-weight: 500;
-        transition: background-color 0.3s;
-        cursor: pointer;
-    }
-    
-    button:hover {
-        background: #168b4b;
-    }
+  button {
+    padding: 1em;
+    background: #1aa85a;
+    color: white;
+    border: 1px solid $neon-cyan;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
 
-    .heading {
-        font-size: 1.8em;
-        font-weight: 500;
-        text-align: center;
-        margin-bottom: 1em;
-    }
+  button:hover {
+    background: #168b4b;
+  }
+
+  .heading {
+    font-size: 1.8em;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1em;
+  }
 }
 
 .contact form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-input, textarea {
-    margin: 5px 0 15px;
-    padding: 8px;
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid $neon-cyan;
-    background: #92bbbaa4;
-    color: white;
+input,
+textarea {
+  margin: 5px 0 15px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid $neon-cyan;
+  background: #92bbbaa4;
+  color: white;
 }
 
 textarea {
-    height: 5em;
+  height: 5em;
 }
 
 label {
-    margin-bottom: 0.5em;
-    font-size: 1.2em;
-    font-weight: 500;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-weight: 500;
 }
-
 
 //      Footer      \\
 footer {
-    background: $blue-glow;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: $footer-height;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-top: 2px $border-style $neon-blue;
+  background: $blue-glow;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: $footer-height;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-top: 2px $border-style $neon-blue;
 
-    div {
-        @include changing-font;
-        font-family: 'neon';
-        font-weight: 700;
-    }
+  div {
+    @include changing-font;
+    font-family: "neon";
+    font-weight: 700;
+  }
 }
-
 
 //         Media Queries        \\
 @media (min-width: 540px) {
-    .logo {
-        display: block;
-        font-size: 3em;
-    }
+  .logo {
+    display: block;
+    font-size: 3em;
+  }
 
-    .nav-links {
-        justify-content: flex-end;
-    }
+  .nav-links {
+    justify-content: flex-end;
+  }
 
-    .page {
-        padding-top: $header-height-sm;
-    }
+  .page {
+    padding-top: $header-height-sm;
+  }
 
-    header nav {
-        height: $header-height-sm;
-        flex-direction: row;
-        padding: 0 0.5em;
-    }
+  header nav {
+    height: $header-height-sm;
+    flex-direction: row;
+    padding: 0 0.5em;
+  }
 
-    .nav-item {
-        flex: 0;
-        font-size: 1.3em;
-    }
+  .nav-item {
+    flex: 0;
+    font-size: 1.3em;
+  }
 }
 
 @media (min-width: 680px) {
-    .projectTile {
-        flex-basis: 45%;
-        margin: 0.5em 0.5em;
-    }
+  .projectTile {
+    flex-basis: 45%;
+    margin: 0.5em 0.5em;
+  }
 }
 
 @media (min-width: 768px) {
-    .tech-projects {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
+  .tech-projects {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 
-    .technologies {
-        padding-bottom: 0;
-        margin-right: 25px;
-    }
+  .technologies {
+    padding-bottom: 0;
+    margin-right: 25px;
+  }
 
-    .technologies ul {
-        flex-direction: column;
-    }
+  .technologies ul {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1200px) {
-    .projectTile {
-        flex-basis: 30%;
-    }
+  .projectTile {
+    flex-basis: 30%;
+  }
 }
 
 @media (min-width: 1600px) {
-    .projectTile {
-        flex-basis: 23%;
-    }
+  .projectTile {
+    flex-basis: 23%;
+  }
 }
-
 
 //      Animations      \\
 
 // separate into own module
 //  Color Flow \\
 @keyframes flow {
-    from {
-        background-position: 0%;
-    }
-    to {
-        background-position: 200%;
-    }
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 200%;
+  }
 }
 
 // Fade In  \\
 @keyframes fadein {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
