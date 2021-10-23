@@ -82,7 +82,7 @@ const TYPES_TO_FILTER = [
 const Technologies = ({ filterTech }) => (
   <div className="technologies">
     <h2>Technologies</h2>
-    <div className="techs-container">
+    <div className="techs-container glow-border-purple">
       {TECHS.map(({ type, kinds }) => {
         const filterKind = TYPES_TO_FILTER.includes(type);
 

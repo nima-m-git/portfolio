@@ -12,8 +12,8 @@ $blue-glow: rgb(0, 0, 78);
 $purple-glow: rgba(128, 73, 255, 0.219);
 $cyan-glow: #004b49;
 
-$radius: 8px;
-$border-width: 2px;
+$radius: 10px;
+$border-width: 4px;
 $border-style: groove;
 $header-height-sm: 4em;
 $header-height-lg: 5em;
@@ -44,6 +44,35 @@ $background-dim: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200%;
+}
+
+@mixin glow-border($color) {
+  border: $border-width $border-style $color;
+  box-shadow: 0 0 8px 2px $color;
+  position: relative;
+  z-index: 0;
+
+  &:after {
+    box-shadow: 0 0 30px 5px $color;
+    animation: fadeInOut 4s infinite;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    left: -2px;
+    bottom: -2px;
+    border-radius: $radius;
+    content: "";
+    z-index: -1;
+  }
+}
+
+.glow-border {
+  &-cyan {
+    @include glow-border($neon-cyan);
+  }
+  &-purple {
+    @include glow-border($neon-purple);
+  }
 }
 
 //      Font        \\
@@ -367,10 +396,10 @@ header nav {
 
 .techs-container,
 .projects {
-  border: $border-width $border-style $neon-purple;
+  // border: $border-width $border-style $neon-purple;
   border-radius: $radius;
   background: $purple-glow;
-  box-shadow: 0 0 8px 1px $neon-purple;
+  // box-shadow: 0 0 8px 1px $neon-purple;
   padding: 0 10px;
 }
 
@@ -516,16 +545,15 @@ header nav {
 //      Contact     \\
 .contact {
   margin-bottom: 0;
-  background: $background-dim,
-    url("https://wallpaperplay.com/walls/full/0/2/7/126417.jpg");
+  background: $background-dim, url("./images/palm-trees.jpg");
   background-size: cover;
 }
 
 .form {
   margin: auto;
   width: 30em;
-  border: $border-width $border-style $neon-cyan;
-  box-shadow: 0 0 8px 1px $neon-cyan;
+  // border: $border-width $border-style $neon-cyan;
+  // box-shadow: 0 0 8px 1px $neon-cyan;
   background: $cyan-glow;
   border-radius: $radius;
   max-width: 80vw;
@@ -646,7 +674,7 @@ footer {
 
   .technologies {
     padding-bottom: 0;
-    margin-right: 25px;
+    margin-right: 50px;
   }
 
   .technologies ul {
@@ -680,9 +708,28 @@ footer {
 }
 
 // Fade In  \\
-@keyframes fadein {
+@keyframes fadeIn {
   0% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Fade InOut  \\
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
