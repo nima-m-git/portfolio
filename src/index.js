@@ -1,15 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import "normalize.css";
-import "./index.scss";
+import 'normalize.css';
+import './index.scss';
 
-import { default as Home } from "./components/home.js";
-import { default as Header } from "./components/header.js";
-import { default as About } from "./components/about.js";
-import { default as Portfolio } from "./components/portfolio.js";
-import { default as Contact } from "./components/contact.js";
+import { default as Home } from './components/home.js';
+import { default as Header } from './components/header.js';
+import { default as About } from './components/about.js';
+import { default as Portfolio } from './components/portfolio.js';
+import { default as Contact } from './components/contact.js';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,5 +28,5 @@ ReactDOM.render(
       </footer>
     </Router>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );

@@ -1,15 +1,14 @@
-import React from "react";
+import React from 'react';
 
-const url =
-  "https://o1newthge3.execute-api.us-east-2.amazonaws.com/dev/static-site-mailer";
+const url = 'https://o1newthge3.execute-api.us-east-2.amazonaws.com/dev/static-site-mailer';
 
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.initialState = {
-      name: "",
-      email: "",
-      message: "",
+      name: '',
+      email: '',
+      message: '',
     };
     this.state = {
       ...this.initialState,
@@ -36,18 +35,18 @@ class ContactForm extends React.Component {
     };
 
     const req = new XMLHttpRequest();
-    req.open("POST", url, true);
-    req.setRequestHeader("Accept", "application/json; charset=utf-8");
-    req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+    req.open('POST', url, true);
+    req.setRequestHeader('Accept', 'application/json; charset=utf-8');
+    req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
     req.send(JSON.stringify(data));
 
     req.onloadend = (response) => {
       if (response.target.status === 200) {
         this.resetForm();
-        alert("Thanks for the message. I’ll be in touch shortly.");
+        alert('Thanks for the message. I’ll be in touch shortly.');
       } else {
-        alert("Something went wrong");
+        alert('Something went wrong');
       }
     };
   }
@@ -65,12 +64,7 @@ class ContactForm extends React.Component {
         <form onSubmit={this.handleSubmit} method="POST">
           <label>
             Name:
-            <input
-              name="name"
-              type="text"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
+            <input name="name" type="text" value={this.state.name} onChange={this.handleChange} />
           </label>
           <label>
             E-Mail:

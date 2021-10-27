@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-import { Technologies } from "./technologies";
-import { projects, groupNames } from "./projects/project_list.js";
+import { Technologies } from './technologies';
+import { projects, groupNames } from './projects/project_list.js';
 
-function CreateProjectTile({
-  project: { background, name, techs, codeURL, viewURL },
-}) {
+function CreateProjectTile({ project: { background, name, techs, codeURL, viewURL } }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -14,7 +12,7 @@ function CreateProjectTile({
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0, opacity: 0 }}
-      transition={{ ease: "easeOut", duration: 1 }}
+      transition={{ ease: 'easeOut', duration: 1 }}
       className="projectTile"
       key={codeURL}
       style={{
@@ -49,9 +47,7 @@ function CreateProjectTile({
 function ProjectTiles(props) {
   const filteredProjects = !props.tech
     ? projects
-    : projects.map((group) =>
-        group.filter((project) => project.techs.includes(props.tech))
-      );
+    : projects.map((group) => group.filter((project) => project.techs.includes(props.tech)));
 
   return (
     <div className="projectTiles">
@@ -66,14 +62,11 @@ function ProjectTiles(props) {
           return (
             group.length > 0 && (
               <div className="projectGroup" key={groupNames[i]}>
-                <h3 style={{ textTransform: "capitalize" }}>{groupNames[i]}</h3>
+                <h3 style={{ textTransform: 'capitalize' }}>{groupNames[i]}</h3>
                 <ul>
                   <AnimatePresence>
                     {group.map((project) => (
-                      <CreateProjectTile
-                        project={project}
-                        key={project.viewURL}
-                      />
+                      <CreateProjectTile project={project} key={project.viewURL} />
                     ))}
                   </AnimatePresence>
                 </ul>

@@ -61,7 +61,7 @@ $background-dim: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
     left: -2px;
     bottom: -2px;
     border-radius: $radius;
-    content: "";
+    content: '';
     z-index: -1;
   }
 }
@@ -77,19 +77,19 @@ $background-dim: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
 
 //      Font        \\
 @font-face {
-  font-family: "neon";
-  src: url("./fonts/neon_glow/NEON GLOW.otf");
+  font-family: 'neon';
+  src: url('./fonts/neon_glow/NEON GLOW.otf');
 }
 
 @font-face {
-  font-family: "neon";
-  src: url("./fonts/neon_glow/NEON GLOW-Bold.otf");
+  font-family: 'neon';
+  src: url('./fonts/neon_glow/NEON GLOW-Bold.otf');
   font-weight: bold;
 }
 
 @font-face {
-  font-family: "lazer";
-  src: url("./fonts/lazer/lazer84-webfont.woff");
+  font-family: 'lazer';
+  src: url('./fonts/lazer/lazer84-webfont.woff');
 }
 
 //    Format   \\
@@ -154,7 +154,7 @@ h1 {
   text-align: center;
   color: $neon-green;
   font-weight: 500;
-  font-family: "neon";
+  font-family: 'neon';
   font-size: 3em;
   margin-top: 0;
 }
@@ -165,14 +165,14 @@ h2 {
   text-align: center;
   margin-bottom: 1em;
   font-size: 2.2em;
-  font-family: "neon";
+  font-family: 'neon';
 }
 
 h3 {
   color: $neon-cyan;
   margin: 0.5em 0;
   font-size: 1.8em;
-  font-family: "neon";
+  font-family: 'neon';
 }
 
 html {
@@ -244,7 +244,7 @@ header nav {
   flex: 1;
   font-size: 1em;
   font-weight: 800;
-  font-family: "lazer";
+  font-family: 'lazer';
   color: $neon-green;
   padding: 5px 25px;
   margin: 0 5px;
@@ -292,7 +292,7 @@ header nav {
 
 .home {
   // background: $background-dim ,url('https://img5.goodfon.com/wallpaper/nbig/0/8f/synth-retrowave-synthwave-new-retro-wave-sintveiv-retrove-25.jpg');
-  background: url("https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif");
+  background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
   background-size: cover;
   background-position: center 40px;
   background-attachment: fixed;
@@ -359,7 +359,7 @@ header nav {
 //      About       \\
 .about {
   position: relative;
-  background: $background-dim, url("./images/dna.jpg");
+  background: $background-dim, url('./images/dna.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -378,7 +378,7 @@ header nav {
   display: flex;
   flex-direction: column;
   background: $background-dim,
-    url("https://i.pinimg.com/originals/96/03/56/96035695827908eb1e4774a802cdfec1.jpg");
+    url('https://i.pinimg.com/originals/96/03/56/96035695827908eb1e4774a802cdfec1.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -532,7 +532,7 @@ header nav {
   background: $blue-glow;
   color: $neon-cyan;
   font-weight: 800;
-  font-family: "neon";
+  font-family: 'neon';
   border: 1.5px solid $neon-blue;
 }
 
@@ -545,7 +545,7 @@ header nav {
 //      Contact     \\
 .contact {
   margin-bottom: 0;
-  background: $background-dim, url("./images/palm-trees.jpg");
+  background: $background-dim, url('./images/palm-trees.jpg');
   background-size: cover;
 }
 
@@ -626,7 +626,7 @@ footer {
 
   div {
     @include changing-font;
-    font-family: "neon";
+    font-family: 'neon';
     font-weight: 700;
   }
 }
