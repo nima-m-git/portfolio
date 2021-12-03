@@ -111,8 +111,7 @@ body {
 }
 
 #root {
-  height: 100%;
-  // min-height: 100vh;
+  height: fit-content;
   position: relative;
 }
 
@@ -142,7 +141,6 @@ p {
   color: white;
   position: relative;
   height: 100%;
-  overflow: scroll;
 }
 
 .container {
@@ -293,6 +291,7 @@ header nav {
 .home {
   // background: $background-dim ,url('https://img5.goodfon.com/wallpaper/nbig/0/8f/synth-retrowave-synthwave-new-retro-wave-sintveiv-retrove-25.jpg');
   background: url('https://miro.medium.com/max/4000/1*mWWz_fABgRc-W2s4VHF6PQ.gif');
+  background: url('./images/retro-sunset.gif');
   background-size: cover;
   background-position: center 40px;
   background-attachment: fixed;

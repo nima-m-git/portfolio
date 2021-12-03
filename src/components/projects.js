@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Technologies } from './technologies';
 import { projects, groupNames } from './projects/project_list.js';
 
-function CreateProjectTile({ project: { background, name, techs, codeURL, viewURL } }) {
-  const [isHovered, setIsHovered] = useState(false);
+import './tiles.scss';
 
+function CreateProjectTile({ project: { background, name, techs, codeURL, viewURL } }) {
   return (
     <motion.li
       initial={{ scale: 0, opacity: 0 }}
@@ -20,26 +20,21 @@ function CreateProjectTile({ project: { background, name, techs, codeURL, viewUR
                 linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5))
                 ,url(${background})`,
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <h4>{name}</h4>
-      {(isHovered && (
-        <div className="viewURLs">
-          <a href={codeURL} target="_blank" rel="noopener noreferrer">
-            View Code
-          </a>
-          <a href={viewURL} target="_blank" rel="noopener noreferrer">
-            View Project
-          </a>
-        </div>
-      )) || (
-        <ul className="techs">
-          {techs.map((tech) => {
-            return <li key={tech}>{tech}</li>;
-          })}
-        </ul>
-      )}
+      <div className="viewURLs hide--hover">
+        <a href={codeURL} target="_blank" rel="noopener noreferrer">
+          View Code
+        </a>
+        <a href={viewURL} target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+      </div>
+      <ul className="techs display--hover">
+        {techs.map((tech) => {
+          return <li key={tech}>{tech}</li>;
+        })}
+      </ul>
     </motion.li>
   );
 }

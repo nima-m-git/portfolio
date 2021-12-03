@@ -1,0 +1,15 @@
+.display--hover {
+  display: none;
+
+  &:hover {
+    display: block;
+  }
+}
+
+.hide--hover {
+  display: block;
+
+  &:hover {
+    display: block;
+  }
+}

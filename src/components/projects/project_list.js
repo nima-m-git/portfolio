@@ -8,6 +8,20 @@ const applications = [
     viewURL: '',
   },
   {
+    name: 'Blog API',
+    background: './media/project-backgrounds/blog.png',
+    techs: ['Node', 'Express', 'MongoDB', 'React', 'Sass'],
+    codeURL: 'https://github.com/nima-m-git/blog-api',
+    viewURL: 'https://thawing-sierra-41526.herokuapp.com/',
+  },
+  {
+    name: 'To-Do',
+    background: './media/project-backgrounds/to-do.webp',
+    techs: ['React', 'Javascript', 'Firestore', 'Framer-Motion'],
+    codeURL: 'https://github.com/nima-m-git/to-do-react',
+    viewURL: 'https://nima-m-git.github.io/to-do-react',
+  },
+  {
     name: 'Spot Analysis',
     background: '/media/project-backgrounds/parking-spot.jpg',
     techs: ['Python', 'Django', 'PostgreSQL'],
@@ -22,25 +36,11 @@ const applications = [
     viewURL: 'https://safe-forest-10126.herokuapp.com/inventory',
   },
   {
-    name: 'Blog API',
-    background: './media/project-backgrounds/blog.png',
-    techs: ['Node', 'Express', 'MongoDB', 'React', 'Sass'],
-    codeURL: 'https://github.com/nima-m-git/blog-full',
-    viewURL: 'https://thawing-sierra-41526.herokuapp.com/',
-  },
-  {
     name: "Where's Waldo",
     background: './media/project-backgrounds/wheres-waldo.webp',
     techs: ['React', 'Javascript', 'Firestore'],
     codeURL: 'https://github.com/nima-m-git/wheres_waldo',
     viewURL: 'https://wheres-waldo-2340a.web.app/',
-  },
-  {
-    name: 'To-Do',
-    background: './media/project-backgrounds/to-do.webp',
-    techs: ['React', 'Javascript', 'Firestore'],
-    codeURL: 'https://github.com/nima-m-git/to-do-react',
-    viewURL: 'https://nima-m-git.github.io/to-do-react',
   },
   // {
   //     name: 'Battleship',
@@ -56,13 +56,13 @@ const applications = [
     codeURL: 'https://github.com/nima-m-git/weather-app-react',
     viewURL: 'https://nima-m-git.github.io/weather-app-react/',
   },
-  {
-    name: 'Library',
-    background: './media/project-backgrounds/library.jpg',
-    techs: ['React', 'Javascript', 'CSS'],
-    codeURL: 'https://github.com/nima-m-git/library-react',
-    viewURL: 'https://nima-m-git.github.io/library-react/',
-  },
+  // {
+  //   name: 'Library',
+  //   background: './media/project-backgrounds/library.jpg',
+  //   techs: ['React', 'Javascript', 'CSS'],
+  //   codeURL: 'https://github.com/nima-m-git/library-react',
+  //   viewURL: 'https://nima-m-git.github.io/library-react/',
+  // },
   {
     name: 'Tic-Tac-Toe',
     background: './media/project-backgrounds/tic-tac-toe.webp',
@@ -91,6 +91,21 @@ const applications = [
   //     codeURL: 'https://github.com/nima-m-git/calculator-react',
   //     viewURL: 'https://nima-m-git.github.io/calculator-react/',
   // },
+];
+
+const animations = [
+  {
+    name: 'Spinning Shapes',
+    background: 'url("./images/spinning-shapes.png")',
+    techs: ['React', 'Framer-Motion'],
+    viewURL: 'https://codesandbox.io/s/round-spin-futyv',
+  },
+  {
+    name: 'Dancing Shapes',
+    background: 'url("./images/dancing-shapes.png")',
+    techs: ['React', 'Framer-Motion'],
+    viewURL: 'https://codesandbox.io/s/circular-motion-xlrhb',
+  },
 ];
 
 const design_clones = [
