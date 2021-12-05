@@ -111,7 +111,8 @@ body {
 }
 
 #root {
-  height: fit-content;
+  min-height: fit-content;
+  height: 100%;
   position: relative;
 }
 
@@ -484,7 +485,7 @@ header nav {
   h4,
   .techs {
     font-weight: 500;
-    width: max-content;
+    // width: max-content;
     padding: 0.4em;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
   }
@@ -503,13 +504,18 @@ header nav {
     width: 100%;
     font-size: 0.8em;
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
   }
 
   .techs {
-    position: absolute;
-    bottom: 5%;
-    text-align: start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    opacity: 0.6;
+
+    li {
+      margin: 5px 10px;
+    }
   }
 
   a:hover {
@@ -614,7 +620,7 @@ label {
 //      Footer      \\
 footer {
   background: $blue-glow;
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
   height: $footer-height;

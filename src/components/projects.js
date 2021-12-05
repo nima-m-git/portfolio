@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Technologies } from './technologies';
 import { projects, groupNames } from './projects/project_list.js';
 
-import './tiles.scss';
+// import './tiles.scss';
 
 function CreateProjectTile({ project: { background, name, techs, codeURL, viewURL } }) {
   return (
