@@ -19,7 +19,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/" exact component={() => <Home />} />
           <Route path="/about" exact component={() => <About />} />
-          <Route path="/portfolio" exact component={() => <Portfolio />} />
+          <Route path="/projects" exact component={() => <Portfolio />} />
           <Route path="/contact" exact component={() => <Contact />} />
         </Switch>
       </div>

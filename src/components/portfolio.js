@@ -25,10 +25,10 @@ const Portfolio = () => {
         </li>
       </ul>
       <p className="centered">
-        These are some hobby projects I've built for fun & learning, and sometimes use as a
-        playground to experiment with different technologies. There is no limit to what can be
-        learnt, built, and improved.
-        <br></br>You may see something new or different next time you check here.
+        These are some of my hobby projects I've built for fun & learning. It's used as a playground
+        for experimenting with different tech, and gets refactored on occasion. There is no limit to
+        what can be learnt, built, and improved.
+        {/* <br></br>You may see something new or different next time you check here. */}
         <br></br>
         {/* <small>
           See something you believe could be improved? Please <a href="/contact">let me know</a>.

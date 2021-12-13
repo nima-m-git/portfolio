@@ -6,7 +6,7 @@ import { projects, groupNames } from './projects/project_list.js';
 
 // import './tiles.scss';
 
-function CreateProjectTile({ project: { background, name, techs, codeURL, viewURL } }) {
+function ProjectTile({ project: { background, name, techs, codeURL, viewURL } }) {
   return (
     <motion.li
       initial={{ scale: 0, opacity: 0 }}
@@ -17,18 +17,22 @@ function CreateProjectTile({ project: { background, name, techs, codeURL, viewUR
       key={codeURL}
       style={{
         backgroundImage: `
-                linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5))
+                linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.7))
                 ,url(${background})`,
       }}
     >
       <h4>{name}</h4>
       <div className="viewURLs hide--hover">
-        <a href={codeURL} target="_blank" rel="noopener noreferrer">
-          View Code
-        </a>
-        <a href={viewURL} target="_blank" rel="noopener noreferrer">
-          View Project
-        </a>
+        <button>
+          <a href={codeURL} target="_blank" rel="noopener noreferrer">
+            View Code
+          </a>
+        </button>
+        <button>
+          <a href={viewURL} target="_blank" rel="noopener noreferrer">
+            View Project
+          </a>
+        </button>
       </div>
       <ul className="techs display--hover">
         {techs.map((tech) => {
@@ -39,7 +43,7 @@ function CreateProjectTile({ project: { background, name, techs, codeURL, viewUR
   );
 }
 
-function ProjectTiles(props) {
+function ProjectTilesContainer(props) {
   const filteredProjects = !props.tech
     ? projects
     : projects.map((group) => group.filter((project) => project.techs.includes(props.tech)));
@@ -61,7 +65,7 @@ function ProjectTiles(props) {
                 <ul>
                   <AnimatePresence>
                     {group.map((project) => (
-                      <CreateProjectTile project={project} key={project.viewURL} />
+                      <ProjectTile project={project} key={project.viewURL} />
                     ))}
                   </AnimatePresence>
                 </ul>
@@ -101,7 +105,7 @@ class Projects extends React.Component {
       <div className="project">
         <div className="tech-projects">
           <Technologies filterTech={this.filterTech} />
-          <ProjectTiles filterOff={this.filterOff} tech={this.state.tech} />
+          <ProjectTilesContainer filterOff={this.filterOff} tech={this.state.tech} />
         </div>
       </div>
     );

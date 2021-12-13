@@ -10,8 +10,8 @@ const Header = () => {
         </NavLink>
 
         <ul className="nav-links">
-          <NavLink to="/portfolio" className="nav-item" activeClassName="active">
-            Portfolio
+          <NavLink to="/projects" className="nav-item" activeClassName="active">
+            Projects
           </NavLink>
           <NavLink to="/about" className="nav-item" activeClassName="active">
             About

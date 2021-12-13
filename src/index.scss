@@ -8,6 +8,7 @@ $neon-pink: #ff00bb;
 $neon-yellow: #ccff15;
 $green-hover: #6fff00a9;
 $cyan-hover: #00fffbb7;
+$blue-hover: #485dff;
 $blue-glow: rgb(0, 0, 78);
 $purple-glow: rgba(128, 73, 255, 0.219);
 $cyan-glow: #004b49;
@@ -132,7 +133,13 @@ p {
   margin-top: 1em;
   margin-bottom: 1em;
   line-height: 1.4em;
-  font-size: 1.2em;
+  font-size: 1.5em;
+}
+
+button {
+  transition: all 0.2s ease;
+  padding: 0.6em;
+  border-radius: 5px;
 }
 
 //      Body        \\
@@ -163,14 +170,14 @@ h2 {
   color: $neon-purple;
   text-align: center;
   margin-bottom: 1em;
-  font-size: 2.2em;
+  font-size: 2.5em;
   font-family: 'neon';
 }
 
 h3 {
   color: $neon-cyan;
   margin: 0.5em 0;
-  font-size: 1.8em;
+  font-size: 2em;
   font-family: 'neon';
 }
 
@@ -189,6 +196,7 @@ span.big {
 .centered {
   margin: 0 auto;
   max-width: 80vw;
+  text-align: center;
 }
 
 //      Header      \\
@@ -251,11 +259,10 @@ header nav {
 
   border-left: 1px solid;
   transition: color 0.7s, background-color 0.4s;
-}
 
-.nav-item:last-child() {
-  @extend %nav-divider;
-  border-right: 1px solid;
+  &:last-child {
+    border-right: 1px solid;
+  }
 }
 
 .logo-item {
@@ -381,7 +388,7 @@ header nav {
     url('https://i.pinimg.com/originals/96/03/56/96035695827908eb1e4774a802cdfec1.jpg');
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
 
   .project {
     margin-top: 5vh;
@@ -463,19 +470,20 @@ header nav {
 .projectTile {
   display: flex;
   flex-basis: 70%;
-  max-width: 300px;
+  min-width: 250px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
 
   margin-bottom: 1em;
-  border: 0.5px $border-style $neon-blue;
-  height: 200px;
+  // border: 0.5px $border-style $neon-blue;
+  min-height: 250px;
   font-size: 1.2em;
   font-weight: 500;
   color: $neon-green;
   border-radius: $radius;
+  box-shadow: 0 0 15px 2px $neon-cyan;
 
   .techs {
     flex-direction: column;
@@ -492,7 +500,7 @@ header nav {
 
   h4 {
     margin: 0 auto;
-    font-size: 1.2em;
+    font-size: 1.25em;
     cursor: default;
     position: absolute;
     top: 10%;
@@ -511,15 +519,28 @@ header nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    opacity: 0.6;
 
     li {
       margin: 5px 10px;
     }
   }
 
-  a:hover {
-    color: $green-hover;
+  a {
+    text-decoration: none;
+    text-shadow: none;
+    border: none;
+  }
+
+  button {
+    background: blueviolet;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9em;
+  }
+
+  button:hover {
+    background-color: $blue-hover;
   }
 }
 
@@ -552,6 +573,7 @@ header nav {
   margin-bottom: 0;
   background: $background-dim, url('./images/palm-trees.jpg');
   background-size: cover;
+  height: 100%;
 }
 
 .form {
@@ -666,7 +688,7 @@ footer {
 @media (min-width: 680px) {
   .projectTile {
     flex-basis: 45%;
-    margin: 0.5em 0.5em;
+    margin: 1rem;
   }
 }
 
@@ -695,7 +717,7 @@ footer {
 
 @media (min-width: 1600px) {
   .projectTile {
-    flex-basis: 23%;
+    flex-basis: 22%;
   }
 }
 
