@@ -17,7 +17,7 @@ const applications = [
   {
     name: 'To-Do',
     background: './media/project-backgrounds/to-do.webp',
-    techs: ['React', 'Javascript', 'Firestore', 'Framer-Motion'],
+    techs: ['React', 'Javascript', 'FireStore', 'Framer-Motion'],
     codeURL: 'https://github.com/nima-m-git/to-do-react',
     viewURL: 'https://nima-m-git.github.io/to-do-react',
   },

@@ -3,7 +3,7 @@ $neon-green: #6fff00;
 $neon-purple: #f000ff;
 $neon-cyan: #00fffb;
 $neon-blue: #001eff;
-$neon-orange: #fd5f00;
+$neon-orange: #fd5d00;
 $neon-pink: #ff00bb;
 $neon-yellow: #ccff15;
 $green-hover: #6fff00a9;
@@ -419,27 +419,34 @@ header nav {
 
   .techs {
     margin: 2em 0;
-  }
 
-  .techs ul {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
 
-  .techs li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0 1em;
-    line-height: 2em;
-    font-size: 1.2em;
-    cursor: pointer;
-    color: $neon-yellow;
-  }
+    li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0 1em;
+      line-height: 2em;
+      font-size: 1.4em;
+      cursor: pointer;
+      color: $neon-yellow;
+      transition: color 0.2s;
 
-  .techs li:hover {
-    text-decoration: underline;
+      span {
+        font-weight: 400;
+      }
+    }
+
+    &.filter {
+      li:hover {
+        color: $neon-orange;
+      }
+    }
   }
 
   .icon {
@@ -459,25 +466,26 @@ header nav {
 .projectGroup {
   border-radius: $radius;
   margin-bottom: 2em;
-}
 
-.projectGroup ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 }
 
 .projectTile {
   display: flex;
   flex-basis: 70%;
-  min-width: 250px;
+  min-width: 300px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
+  margin: 2rem;
 
   margin-bottom: 1em;
-  // border: 0.5px $border-style $neon-blue;
+  border: 3px $border-style $neon-cyan;
   min-height: 250px;
   font-size: 1.2em;
   font-weight: 500;
@@ -522,6 +530,7 @@ header nav {
 
     li {
       margin: 5px 10px;
+      cursor: initial;
     }
   }
 
@@ -529,6 +538,8 @@ header nav {
     text-decoration: none;
     text-shadow: none;
     border: none;
+    font-weight: 600;
+    font-size: 0.9em;
   }
 
   button {
@@ -688,7 +699,6 @@ footer {
 @media (min-width: 680px) {
   .projectTile {
     flex-basis: 45%;
-    margin: 1rem;
   }
 }
 

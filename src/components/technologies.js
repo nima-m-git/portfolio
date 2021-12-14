@@ -71,7 +71,7 @@ const TECHS = [
   },
 ];
 
-const TYPES_TO_FILTER = ['Programming', 'Runtime Env', 'Libraries', 'Frameworks', 'Databases'];
+const TYPES_TO_FILTER = ['Programming', 'Runtime Envs', 'Libraries', 'Frameworks', 'Databases'];
 
 const Technologies = ({ filterTech }) => (
   <div className="technologies">
@@ -81,7 +81,7 @@ const Technologies = ({ filterTech }) => (
         const filterKind = TYPES_TO_FILTER.includes(type);
 
         return (
-          <div className={type + ' techs'} key={type}>
+          <div className={`${type} techs ${filterKind ? 'filter' : ''}`} key={type}>
             <h3>{type}</h3>
             <ul>
               {kinds.map((kind) => (

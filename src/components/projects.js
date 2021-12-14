@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Technologies } from './technologies';
@@ -12,7 +12,8 @@ function ProjectTile({ project: { background, name, techs, codeURL, viewURL } })
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0, opacity: 0 }}
-      transition={{ ease: 'easeOut', duration: 1 }}
+      transition={{ ease: 'easeOut', duration: 0.5 }}
+      whileHover={{ scale: 1.1, transition: { duration: 0.1, ease: 'linear' } }}
       className="projectTile"
       key={codeURL}
       style={{
