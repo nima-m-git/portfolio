@@ -493,6 +493,19 @@ header nav {
   border-radius: $radius;
   box-shadow: 0 0 15px 2px $neon-cyan;
 
+
+  button {
+    background: blueviolet;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9em;
+  }
+
+  button:hover {
+    background-color: $blue-hover;
+  }
+
   .techs {
     flex-direction: column;
   }
@@ -540,18 +553,6 @@ header nav {
     border: none;
     font-weight: 600;
     font-size: 0.9em;
-  }
-
-  button {
-    background: blueviolet;
-    color: white;
-    border: none;
-    font-weight: 600;
-    font-size: 0.9em;
-  }
-
-  button:hover {
-    background-color: $blue-hover;
   }
 }
 

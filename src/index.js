@@ -24,7 +24,7 @@ ReactDOM.render(
         </Switch>
       </div>
       <footer>
-        <div>2020 Nima Mirzaei</div>
+        <div>{new Date().getFullYear()} Nima Mirzaei</div>
       </footer>
     </Router>
   </React.StrictMode>,
