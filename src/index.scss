@@ -108,8 +108,8 @@ $background-dim: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
 
 html,
 body {
-  min-height: 100%;
-  height: fit-content;
+  min-height: fit-content;
+  height: 100%;
 }
 
 #root {
